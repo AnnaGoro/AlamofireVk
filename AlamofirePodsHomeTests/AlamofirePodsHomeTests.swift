@@ -33,7 +33,7 @@ class AlamofirePodsHomeTests: XCTestCase {
         
      
         print("Trololo\(audioGetService.getPopularAudioCount("only_eng=1", count: "count=10"))")
-        
+        audioGetService.getPopularAudioCount("only_eng=1", count: "count=10");
         photoGetService.getPhotoById1()
     
     }

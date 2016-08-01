@@ -47,8 +47,8 @@ class AudioGetService {
                 //let audioModelArray = response.result.value
             if let audioModelArray = response.result.value {
             for value in audioModelArray {
-                print(value.artist)
-                 print(value.duration)
+                print("\(value.artist) + method")
+                 print("\(value.duration) + method")
                  print(value.genre_id)
                  print(value.owner_id)
                  print(value.title)
