@@ -49,12 +49,17 @@ class UserGetService {
     //var parameterUserId = "user_ids=210700286"
     //var parameterShowField = "fields=bdate"
     
-    func getUserById1 (parameterUserId : String, parameterShowField : String) {
-        Alamofire.request(.GET, (mainUrlMethod + methodName + parameterUserId + amper + parameterShowField + accessToken) )
+    func getUserById1() {
+       // let url = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53"
+        let url = "https://api.vk.com/method/users.get"
+        
+        
+        Alamofire.request(.GET, url, parameters: ["user_ids" : "210700286", "fields" : "bdate", "v":"5.53"] )
             .responseObject { (response: Response<UserModel, NSError>) in
-            
-            let userModel = response.result.value
-            print(userModel)
+                
+                let userModel = response.result.value
+               // XCTAssertNotNil(userModel)
+                print(userModel?.bdate)
             
             
             
