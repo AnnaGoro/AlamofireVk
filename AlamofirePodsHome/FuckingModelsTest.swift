@@ -15,7 +15,7 @@ class WeatherResponse: Mappable {
    
         var location: String?
         var threeDayForecast: [Forecast]?
-        
+        var fuck: String?
         required init?(_ map: Map){
             
         }
@@ -23,6 +23,7 @@ class WeatherResponse: Mappable {
         func mapping(map: Map) {
             location <- map["location"]
             threeDayForecast <- map["three_day_forecast"]
+            fuck <- map["fuck"]
         }
     }
     

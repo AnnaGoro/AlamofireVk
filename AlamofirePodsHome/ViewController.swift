@@ -20,8 +20,8 @@ class ViewController : UIViewController {
         var photoGetService = PhotoGetService()
         print("Trololo")
         userGetService.getUserById1()
-        audioGetService.getPopularAudioCount("only_eng=1", count: "count=10");
-        photoGetService.getPhotoById1()
+      //  audioGetService.getPopularAudioCount("only_eng=1", count: "count=10");
+        //photoGetService.getPhotoById1()
        // userGetService.getUserByIdJSON()
         userGetService.getUserByIdJSONFullUrlTest()
        // print("Trololo2")
@@ -34,8 +34,8 @@ class ViewController : UIViewController {
         //let bundle = NSBundle.mainBundle().infoDictionary?["CFBundleIdentifier"] as? NSString
         
         
-        var fuckingTest = FuckingTest()
-        fuckingTest.ffffffu()
+       // var fuckingTest = FuckingTest()
+       // fuckingTest.ffffffu()
        // print (bundle)
        // print("**********************")
     }

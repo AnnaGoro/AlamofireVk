@@ -90,24 +90,26 @@ class UserGetService {
    
     func getUserById1() {
        // let example url = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53"
-        let url = "https://api.vk.com/method/users.get?"
-        
-        
-        Alamofire.request(.GET, url, parameters: ["user_ids" : "210700286", "fields" : "bdate", "v":"5.53"] )
-            .responseArray { (response: Response<[UserModel], NSError>) in
-              
-                if let userModel = response.result.value {
-                print("getUserById1 ")
-                    print (userModel[0].bdate)
-                    print (userModel[0].first_name)
-                    print (userModel[0].last_name)
-                    print(userModel[0].id)
+       // let url = "https://api.vk.com/method/users.get?"
+        let url = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53"
+       // Alamofire.request(.GET, url, parameters: ["user_ids" : "210700286", "fields" : "bdate", "v":"5.53"] )
+             Alamofire.request(.GET, url).validate()
+                .responseArray { (response: Response<[UserModel], NSError>) in
+              let userModel = response.result.value
+                print("getUserById1 before unwrapping")
+                if let userModel = userModel {
+                for value in userModel {
+                    print("getUserById1 ")
+                    print (value.bdate)
+                    print (value.first_name)
+                    print (value.last_name)
+                    print(value.id)
                 }
-            
-            
-        }
-}
-    
+                }
+      
+                 }
+
+    }
     
     func getUserById(parameterUserId : String) {
         
@@ -120,8 +122,8 @@ class UserGetService {
                 
         }
         
-        
-    }
+        }
+    
     
     func getUserById(parameterUserId : String, parameterShowField1 : String,  parameterShowField2 : String) {
         

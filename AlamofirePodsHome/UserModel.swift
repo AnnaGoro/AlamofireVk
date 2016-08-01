@@ -18,11 +18,11 @@ class UserModel: Mappable {
     
     //  deleted или banned if returns
     
-   // var deactivated : String?
+    var deactivated : String?
    
     /*  возвращается 1 при вызове без access_token, если пользователь установил настройку «Кому в интернете видна моя страница» — «Только пользователям ВКонтакте». */
     
-   // var hidden : Int?
+    var hidden : Int?
     
     
     //  DD.MM.YYYY или DD.MM (если год рождения скрыт). Если дата рождения скрыта целиком, поле отсутствует в ответе.
@@ -38,7 +38,7 @@ class UserModel: Mappable {
     
     
     required init?(_ map: Map){
-        mapping(map)
+       // mapping(map)
     }
     
 
@@ -48,8 +48,8 @@ class UserModel: Mappable {
          first_name <- map["first_name"]
          last_name <- map["last_name"]
         // photo_50 <- map["photo_50"]
-      //   deactivated <- map["deactivated"]
-       //  hidden <- (map["hidden"], transform )
+         deactivated <- map["deactivated"]
+         hidden <- (map["hidden"], transform )
          bdate <- map["bdate"]
         // books <- map["books"]
        //  interests <- map["interests"]
