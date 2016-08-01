@@ -94,21 +94,23 @@ class UserGetService {
         let url = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53"
        // Alamofire.request(.GET, url, parameters: ["user_ids" : "210700286", "fields" : "bdate", "v":"5.53"] )
              Alamofire.request(.GET, url).validate()
-                .responseArray { (response: Response<[UserModel], NSError>) in
-              let userModel = response.result.value
+                .responseObject { (response: Response<UserResponseModel, NSError>) in
+              let userResponseModel = response.result.value
                 print("getUserById1 before unwrapping")
-                if let userModel = userModel {
+                if let userResponseModel = userResponseModel {
+                    if let userModel = userResponseModel.response {
+                    
                 for value in userModel {
                     print("getUserById1 ")
-                    print (value.bdate)
-                    print (value.first_name)
-                    print (value.last_name)
-                    print(value.id)
-                }
-                }
-      
-                 }
-
+                    print (value)
+                  //  print (value.first_name)
+                   // print (value.last_name)
+                  //  print(value.id)
+                        }
+                    }
+                    }
+        }
+        
     }
     
     func getUserById(parameterUserId : String) {

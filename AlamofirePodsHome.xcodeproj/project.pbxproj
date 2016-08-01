@@ -27,6 +27,10 @@
 		D71F0EFB1D4CF0FA004A46B7 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EFA1D4CF0FA004A46B7 /* AuthorizationService.swift */; };
 		D71F0EFD1D4D679B004A46B7 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EFC1D4D679B004A46B7 /* ApiError.swift */; };
 		D75C69BB1D4FC20100AE5274 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D75C69BA1D4FC20100AE5274 /* Default-568h@2x.png */; };
+		D75C69BD1D4FEE8600AE5274 /* UserResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69BC1D4FEE8600AE5274 /* UserResponseModel.swift */; };
+		D75C69BF1D4FEF0A00AE5274 /* AudioResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */; };
+		D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */; };
+		D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */; };
 		D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F24E71D4E2ED00024448A /* urlsEn.swift */; };
 		D76F24EA1D4F5BE00024448A /* VKSdkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F24E91D4F5BDF0024448A /* VKSdkDelegate.swift */; };
 		D7D8C65A1D4B61F900DC1A5B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7D8C6591D4B61F900DC1A5B /* Podfile */; };
@@ -78,6 +82,10 @@
 		D71F0EFA1D4CF0FA004A46B7 /* AuthorizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		D71F0EFC1D4D679B004A46B7 /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		D75C69BA1D4FC20100AE5274 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D75C69BC1D4FEE8600AE5274 /* UserResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResponseModel.swift; sourceTree = "<group>"; };
+		D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioResponseModel.swift; sourceTree = "<group>"; };
+		D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoResponseModel.swift; sourceTree = "<group>"; };
+		D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResponseModel.swift; sourceTree = "<group>"; };
 		D76F24E71D4E2ED00024448A /* urlsEn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlsEn.swift; sourceTree = "<group>"; };
 		D76F24E91D4F5BDF0024448A /* VKSdkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKSdkDelegate.swift; sourceTree = "<group>"; };
 		D7D8C6591D4B61F900DC1A5B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -204,6 +212,10 @@
 				D71F0EF21D4CEF2C004A46B7 /* VideoModel.swift */,
 				D71F0EF41D4CEF3C004A46B7 /* PhotoModel.swift */,
 				D71F0EF61D4CEF4A004A46B7 /* UserModel.swift */,
+				D75C69BC1D4FEE8600AE5274 /* UserResponseModel.swift */,
+				D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */,
+				D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */,
+				D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -403,7 +415,9 @@
 				D71F0EF51D4CEF3C004A46B7 /* PhotoModel.swift in Sources */,
 				D71F0EF11D4CEF1D004A46B7 /* AudioModel.swift in Sources */,
 				D71F0EEA1D4CEEC2004A46B7 /* VideoGetService.swift in Sources */,
+				D75C69BF1D4FEF0A00AE5274 /* AudioResponseModel.swift in Sources */,
 				D7E8017E1D4FB61C00D373E1 /* FuckingTest.swift in Sources */,
+				D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */,
 				D71F0EFB1D4CF0FA004A46B7 /* AuthorizationService.swift in Sources */,
 				D7E801801D4FB64A00D373E1 /* FuckingModelsTest.swift in Sources */,
 				D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */,
@@ -413,8 +427,10 @@
 				D71F0EEC1D4CEED0004A46B7 /* UserGetService.swift in Sources */,
 				D71F0EE81D4CEE50004A46B7 /* AudioGetService.swift in Sources */,
 				D7002EE01D4AB2D50014728D /* AppDelegate.swift in Sources */,
+				D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */,
 				D76F24EA1D4F5BE00024448A /* VKSdkDelegate.swift in Sources */,
 				D71F0EF71D4CEF4A004A46B7 /* UserModel.swift in Sources */,
+				D75C69BD1D4FEE8600AE5274 /* UserResponseModel.swift in Sources */,
 				D71F0EFD1D4D679B004A46B7 /* ApiError.swift in Sources */,
 				D71F0EEE1D4CEEE6004A46B7 /* PhotoGetService.swift in Sources */,
 			);

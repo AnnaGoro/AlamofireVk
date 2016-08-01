@@ -14,7 +14,7 @@ class UserModel: Mappable {
     var id: Int?
     var first_name: String?
     var last_name: String?
-  //  var photo_50 : String? // url
+    var photo_50 : String? // url
     
     //  deleted или banned if returns
     
@@ -28,13 +28,13 @@ class UserModel: Mappable {
     //  DD.MM.YYYY или DD.MM (если год рождения скрыт). Если дата рождения скрыта целиком, поле отсутствует в ответе.
     
     var bdate: String?
-   // var books : String?
-   // var interests : String?
-   // var home_town : String?
+    var books : String?
+    var interests : String?
+    var home_town : String?
     
     
 
-     var transform = TransformOf<Int, String>(fromJSON: { Int($0!) }, toJSON: { $0.map { String($0) } })
+  //   var transform = TransformOf<Int, String>(fromJSON: { Int($0!) }, toJSON: { $0.map { String($0) } })
     
     
     required init?(_ map: Map){
@@ -44,16 +44,16 @@ class UserModel: Mappable {
 
     
     func mapping(map: Map) {
-         id <- (map["id"], transform)
+         id <- (map["id"])
          first_name <- map["first_name"]
          last_name <- map["last_name"]
-        // photo_50 <- map["photo_50"]
+         photo_50 <- map["photo_50"]
          deactivated <- map["deactivated"]
-         hidden <- (map["hidden"], transform )
+         hidden <- (map["hidden"])
          bdate <- map["bdate"]
-        // books <- map["books"]
-       //  interests <- map["interests"]
-        // home_town <- map["home_town"]
+         books <- map["books"]
+         interests <- map["interests"]
+         home_town <- map["home_town"]
         
     }
     
