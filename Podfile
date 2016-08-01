@@ -9,5 +9,6 @@ pod 'Alamofire', '~> 3.4'
 pod 'AlamofireObjectMapper', '~> 3.0'
 pod 'VK-ios-sdk'
 pod 'AlamofireJsonToObjects'
+#pod 'SwiftyVK', :git => 'https://github.com/WE-St0r/SwiftyVK.git'
 
 end

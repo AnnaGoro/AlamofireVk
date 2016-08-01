@@ -9,49 +9,51 @@
 import Foundation
 import ObjectMapper
 
-class UserModel : Mappable {
+class UserModel: Mappable {
 
-    var id : Int?
-    var first_name : String?
-    var last_name : String?
-    var photo_50 : String? // url
+    var id: Int?
+    var first_name: String?
+    var last_name: String?
+  //  var photo_50 : String? // url
     
     //  deleted или banned if returns
     
-    var deactivated : String?
+   // var deactivated : String?
    
     /*  возвращается 1 при вызове без access_token, если пользователь установил настройку «Кому в интернете видна моя страница» — «Только пользователям ВКонтакте». */
     
-    var hidden : Int?
+   // var hidden : Int?
     
     
     //  DD.MM.YYYY или DD.MM (если год рождения скрыт). Если дата рождения скрыта целиком, поле отсутствует в ответе.
     
-    var bdate : String?
-    var books : String?
-    var interests : String?
-    var home_town : String?
+    var bdate: String?
+   // var books : String?
+   // var interests : String?
+   // var home_town : String?
     
     
-    var transformStringToInt = TransformOf<Int, String>(fromJSON: { Int($0!) }, toJSON: { $0.map { String($0) } })
+
+     var transform = TransformOf<Int, String>(fromJSON: { Int($0!) }, toJSON: { $0.map { String($0) } })
+    
     
     required init?(_ map: Map){
-        
+        mapping(map)
     }
     
-   // TransformOf<Int, String>(fromJSON: { Int($0!) }, toJSON: { $0.map //{ String($0) } })
+
     
     func mapping(map: Map) {
-         id <- (map["id"], transformStringToInt)
+         id <- (map["id"], transform)
          first_name <- map["first_name"]
          last_name <- map["last_name"]
-         photo_50 <- map["photo_50"]
-         deactivated <- map["deactivated"]
-         hidden <- (map["hidden"], transformStringToInt )
+        // photo_50 <- map["photo_50"]
+      //   deactivated <- map["deactivated"]
+       //  hidden <- (map["hidden"], transform )
          bdate <- map["bdate"]
-         books <- map["books"]
-         interests <- map["interests"]
-         home_town <- map["home_town"]
+        // books <- map["books"]
+       //  interests <- map["interests"]
+        // home_town <- map["home_town"]
         
     }
     

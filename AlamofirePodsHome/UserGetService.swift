@@ -7,10 +7,9 @@
 //
 
 import Foundation
+import ObjectMapper
 import Alamofire
 import AlamofireObjectMapper
-import AlamofireJsonToObjects
-
 class UserGetService {
     
     // https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53
@@ -49,31 +48,75 @@ class UserGetService {
     //var parameterUserId = "user_ids=210700286"
     //var parameterShowField = "fields=bdate"
     
-    func getUserById1() {
-       // let url = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53"
-        let url = "https://api.vk.com/method/users.get"
+    
+    func getUserByIdJSON() {
+        
+        let url = "https://api.vk.com/method/users.get?"
         
         
         Alamofire.request(.GET, url, parameters: ["user_ids" : "210700286", "fields" : "bdate", "v":"5.53"] )
-            .responseObject { (response: Response<UserModel, NSError>) in
+            .responseJSON { response in
+                // print(response.request)  // original URL request
+                //print(response.response) // URL response
+                // print(response.data)     // server data
+                // print(response.result)   // result of response serialization
                 
-                let userModel = response.result.value
-               // XCTAssertNotNil(userModel)
-                print(userModel?.bdate)
-            
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
+    }
+
+    
+    
+    func getUserByIdJSONFullUrlTest() {
+      
+        let url = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53"
+        
+        
+        Alamofire.request(.GET, url)
+            .responseJSON { response in
+               // print(response.request)  // original URL request
+                //print(response.response) // URL response
+               // print(response.data)     // server data
+               // print(response.result)   // result of response serialization
+                
+                if let JSON = response.result.value {
+                    print("JSON  full url without params: \(JSON)")
+                }
+        }
+    }
+    
+   
+    func getUserById1() {
+       // let example url = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53"
+        let url = "https://api.vk.com/method/users.get?"
+        
+        
+        Alamofire.request(.GET, url, parameters: ["user_ids" : "210700286", "fields" : "bdate", "v":"5.53"] )
+            .responseArray { (response: Response<[UserModel], NSError>) in
+              
+                if let userModel = response.result.value {
+                print("getUserById1 ")
+                    print (userModel[0].bdate)
+                    print (userModel[0].first_name)
+                    print (userModel[0].last_name)
+                    print(userModel[0].id)
+                }
             
             
         }
 }
+    
+    
     func getUserById(parameterUserId : String) {
         
-        Alamofire.request(.GET, (mainUrlMethod + methodName + parameterUserId + amper  + accessToken) )
-            .responseObject { (response: Response<UserModel, NSError>) in
-                
-                let userModel = response.result.value
+        Alamofire.request(.GET, mainUrlMethod + methodName + parameterUserId + amper  + accessToken)
+            .responseObject { (response: Response<UserModel, NSError>) in                
+                if let userModel = response.result.value {
                 print(userModel)
                 
-                
+                }
                 
         }
         
@@ -114,8 +157,7 @@ class UserGetService {
     func getUserById(parameterUserId : String, parameterShowField1 : String,  parameterShowField2 : String,  parameterShowField3 : String, parameterShowField4 : String) {
         
         Alamofire.request(.GET, (mainUrlMethod + methodName + parameterUserId + amper + parameterShowField1 + parameterShowField2 + parameterShowField3 + parameterShowField4 + accessToken) )
-            .responseObject { (response: Response<UserModel, NSError>) in
-                
+            .responseObject{(response: Response<UserModel, NSError>) in
                 let userModel = response.result.value
                 print(userModel)
                 

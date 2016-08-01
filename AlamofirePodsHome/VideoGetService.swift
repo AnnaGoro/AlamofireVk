@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import ObjectMapper
 import Alamofire
+import AlamofireObjectMapper
 
 class VideoGetService {
 
