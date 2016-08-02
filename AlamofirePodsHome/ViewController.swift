@@ -9,35 +9,29 @@
 import UIKit
 import VK_ios_sdk
 class ViewController : UIViewController {
-
     
+@IBOutlet weak var authWebView: UIWebView!
+     var webViewController = WebViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var userGetService = UserGetService()
-        var audioGetService = AudioGetService()
         
-        var photoGetService = PhotoGetService()
-        print("Trololo")
-        userGetService.getUserById1()
-      //  audioGetService.getPopularAudioCount("only_eng=1", count: "count=10");
-        //photoGetService.getPhotoById1()
-       // userGetService.getUserByIdJSON()
-        userGetService.getUserByIdJSONFullUrlTest()
-       // print("Trololo2")
-       // let bundleIdentifier = NSBundle.mainBundle().bundleIdentifier
-        //print("Bundle :")
-       // print(bundleIdentifier)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let access_token = defaults.stringForKey("access_token") {
+            print(access_token)
+        } else {            
+            if let url = NSURL(string: Authorization.REQUEST_STR) {
+                
+                let request = NSURLRequest(URL: url)
+                authWebView.loadRequest(request)
+                webViewController.webViewDidStartLoad(authWebView)
+                
+            }
+
+            
+        }
+            
         
-        print("**********************")
-        //print ("id: ")
-        //let bundle = NSBundle.mainBundle().infoDictionary?["CFBundleIdentifier"] as? NSString
-        
-        
-       // var fuckingTest = FuckingTest()
-       // fuckingTest.ffffffu()
-       // print (bundle)
-       // print("**********************")
     }
     
 

@@ -16,6 +16,7 @@ class AlamofirePodsHomeTests: XCTestCase {
     var audioGetService = AudioGetService()
     var photoGetService = PhotoGetService()
     var userGetService = UserGetService()
+    var videoGetService = VideoGetService()
     
     var token = "http://api.vk.com/blank.html#access_token=524c1f441a0f1e0325e1a34220f3929035add91616fed4eb0422c364bc59138c3f67a2e792115aad4257d&expires_in=0&user_id=29338816"
     
@@ -32,30 +33,13 @@ class AlamofirePodsHomeTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-    /*
-        print("Trololo")
+       
+
         userGetService.getUserById1()
         audioGetService.getPopularAudioCount("only_eng=1", count: "count=10");
         photoGetService.getPhotoById1()
-     
-        
-        print("Trololo2")
-    let bundleIdentifier = NSBundle.mainBundle().bundleIdentifier
-        print("Bundle :")
-     print(bundleIdentifier)
-        
-         print("**********************")
-        print ("id: ")
-        let bundle = NSBundle.mainBundle().infoDictionary?["CFBundleIdentifier"] as? NSString
-        
-       
-        
-        print (bundle)
-         print("**********************")
+        userGetService.getUserByIdJSON()
     
-    */
-        
         }
     func testPerformanceExample() {
         // This is an example of a performance test case.

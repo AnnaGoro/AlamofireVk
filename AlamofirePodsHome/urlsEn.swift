@@ -9,8 +9,12 @@
 import Foundation
 
 class Url {
-
-    static var mainUrl = "https://api.vk.com/method/"
-    static var accessTocken = "&access_token=524c1f441a0f1e0325e1a34220f3929035add91616fed4eb0422c364bc59138c3f67a2e792115aad4257d"
+    
+  static  var accessTocken: String = "access_token=" + NSUserDefaults.standardUserDefaults().stringForKey("access_token")!
+   
+    
+  static var mainUrl = "https://api.vk.com/method/"
+    
+    // e82b9c3e363972050e1a89d0edb34a2a6e44f75a1a0ca06e16a71898e5b4cbaf6e1cf727a5a171d123b13
 
 }

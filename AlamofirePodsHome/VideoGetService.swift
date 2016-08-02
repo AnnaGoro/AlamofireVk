@@ -26,36 +26,47 @@ class VideoGetService {
     
     func getVideoById (owner_id : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNameVideoGet + owner_id + amper +  accessToken) )
-             .responseArray { (response: Response<[VideoModel], NSError>) in
-                
-                let videoModelArray = response.result.value
-                print(videoModelArray)
-                
-                
-                
+            .responseObject { (response: Response<VideoResponseModel, NSError>) in
+                let videoResponseModel = response.result.value
+                if let videoResponseModel = videoResponseModel {
+                    if let videoModel = videoResponseModel.response {
+                        
+                        for value in videoModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
     func getVideoByIdCount (owner_id : String, count : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNameVideoGet + owner_id + amper + count +  accessToken) )
-            .responseArray { (response: Response<[VideoModel], NSError>) in
-                
-                let videoModelArray = response.result.value
-                print(videoModelArray)
-                
-                
-                
+            .responseObject { (response: Response<VideoResponseModel, NSError>) in
+                let videoResponseModel = response.result.value
+                if let videoResponseModel = videoResponseModel {
+                    if let videoModel = videoResponseModel.response {
+                        
+                        for value in videoModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
-    
     func getUserVideos (user_id  : String, count : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNameGetUserVideos + user_id + amper + count +  accessToken) )
-           .responseArray { (response: Response<[VideoModel], NSError>) in
-                
-                let videoModelArray = response.result.value
-                print(videoModelArray)
-                
-                
-                
+            .responseObject { (response: Response<VideoResponseModel, NSError>) in
+                let videoResponseModel = response.result.value
+                if let videoResponseModel = videoResponseModel {
+                    if let videoModel = videoResponseModel.response {
+                        
+                        for value in videoModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
 //search_own  -  1 - — искать по видеозаписям пользователя, 0 — не искать по видеозаписям пользователя. По умолчанию: 0. 
@@ -63,12 +74,17 @@ class VideoGetService {
     
     func getSearchVideos (keyWord q : String, search_own : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNameGetSearchVideos + q  + amper + search_own +  accessToken) )
-            .responseArray { (response: Response<[VideoModel], NSError>) in
-                let videoModelArray = response.result.value
-                print(videoModelArray)
-                
-                
-                
+            .responseObject { (response: Response<VideoResponseModel, NSError>) in
+                let videoResponseModel = response.result.value
+                if let videoResponseModel = videoResponseModel {
+                    if let videoModel = videoResponseModel.response {
+                        
+                        for value in videoModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
 
@@ -77,16 +93,19 @@ class VideoGetService {
     
     func getSearchVideos (keyWord q : String, search_own : String, longer : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNameGetSearchVideos + q  + amper + search_own + amper + longer +  accessToken) )
-           .responseArray { (response: Response<[VideoModel], NSError>) in
-                
-                let videoModelArray = response.result.value
-                print(videoModelArray)
-                
-                
-                
+            .responseObject { (response: Response<VideoResponseModel, NSError>) in
+                let videoResponseModel = response.result.value
+                if let videoResponseModel = videoResponseModel {
+                    if let videoModel = videoResponseModel.response {
+                        
+                        for value in videoModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
-    
     
     
 }

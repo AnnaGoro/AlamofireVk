@@ -23,25 +23,33 @@ class PhotoGetService {
     
     func getPhotoById1 () {
         Alamofire.request(.GET, (mainUrlMethod + methodNamePhotosGet + owner_id +  accessToken) )
-            .responseArray { (response: Response<[PhotoModel], NSError>) in
-                
-                let photoModelArray = response.result.value
-                print(photoModelArray)
-                
-                
-                
+            .responseObject { (response: Response<PhotoResponseModel, NSError>) in
+                let photoResponseModel = response.result.value
+                if let photoResponseModel = photoResponseModel {
+                    if let photoModel = photoResponseModel.response {
+                        
+                        for value in photoModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
     
     func getSavedPhotoById (owner_id : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNamePhotosGet + owner_id + amper + album_id +  accessToken) )
-            .responseArray { (response: Response<[PhotoModel], NSError>) in
-                
-                let photoModelArray = response.result.value
-                print(photoModelArray)
-                
-                
-                
+            .responseObject { (response: Response<PhotoResponseModel, NSError>) in
+                let photoResponseModel = response.result.value
+                if let photoResponseModel = photoResponseModel {
+                    if let photoModel = photoResponseModel.response {
+                        
+                        for value in photoModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
 
@@ -49,42 +57,52 @@ class PhotoGetService {
     
     func getSearchPhotoKeyWord (keyWord q : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNamePhotosSearch + q  + amper +  accessToken) )
-           .responseArray { (response: Response<[PhotoModel], NSError>) in
-                let photoModelArray = response.result.value
-                print(photoModelArray)
-                
-                
-                
+            .responseObject { (response: Response<PhotoResponseModel, NSError>) in
+                let photoResponseModel = response.result.value
+                if let photoResponseModel = photoResponseModel {
+                    if let photoModel = photoResponseModel.response {
+                        
+                        for value in photoModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
-
     func getSearchPhotoKeyWord (keyWord q : String, count : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNamePhotosSearch + q  + amper + count +  accessToken) )
-            .responseArray { (response: Response<[PhotoModel], NSError>) in
-                
-                let photoModelArray = response.result.value
-                print(photoModelArray)
-                
-                
-                
+            .responseObject { (response: Response<PhotoResponseModel, NSError>) in
+                let photoResponseModel = response.result.value
+                if let photoResponseModel = photoResponseModel {
+                    if let photoModel = photoResponseModel.response {
+                        
+                        for value in photoModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
 
     //lat - -90 to 90
     //long - -180 to 180
     
-    func getSearchPhotoLatLong (lat lat : String, long long : String) {
+    func getSearchPhotoLatLong (lat lat : String, long : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNamePhotosSearch + lat  + amper + long +  accessToken) )
-           .responseArray { (response: Response<[PhotoModel], NSError>) in
-                
-                let photoModelArray = response.result.value
-                print(photoModelArray)
-                
-                
-                
+            .responseObject { (response: Response<PhotoResponseModel, NSError>) in
+                let photoResponseModel = response.result.value
+                if let photoResponseModel = photoResponseModel {
+                    if let photoModel = photoResponseModel.response {
+                        
+                        for value in photoModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
-    
-
 
 }

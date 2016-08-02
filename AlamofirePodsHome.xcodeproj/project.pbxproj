@@ -31,6 +31,7 @@
 		D75C69BF1D4FEF0A00AE5274 /* AudioResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */; };
 		D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */; };
 		D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */; };
+		D75C69C51D5011F400AE5274 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C41D5011F400AE5274 /* WebViewController.swift */; };
 		D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F24E71D4E2ED00024448A /* urlsEn.swift */; };
 		D76F24EA1D4F5BE00024448A /* VKSdkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F24E91D4F5BDF0024448A /* VKSdkDelegate.swift */; };
 		D7D8C65A1D4B61F900DC1A5B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7D8C6591D4B61F900DC1A5B /* Podfile */; };
@@ -86,6 +87,7 @@
 		D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioResponseModel.swift; sourceTree = "<group>"; };
 		D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoResponseModel.swift; sourceTree = "<group>"; };
 		D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResponseModel.swift; sourceTree = "<group>"; };
+		D75C69C41D5011F400AE5274 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D76F24E71D4E2ED00024448A /* urlsEn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlsEn.swift; sourceTree = "<group>"; };
 		D76F24E91D4F5BDF0024448A /* VKSdkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKSdkDelegate.swift; sourceTree = "<group>"; };
 		D7D8C6591D4B61F900DC1A5B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -170,6 +172,7 @@
 				D76F24E91D4F5BDF0024448A /* VKSdkDelegate.swift */,
 				D7E8017D1D4FB61C00D373E1 /* FuckingTest.swift */,
 				D7E8017F1D4FB64A00D373E1 /* FuckingModelsTest.swift */,
+				D75C69C41D5011F400AE5274 /* WebViewController.swift */,
 			);
 			path = AlamofirePodsHome;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D71F0EF51D4CEF3C004A46B7 /* PhotoModel.swift in Sources */,
+				D75C69C51D5011F400AE5274 /* WebViewController.swift in Sources */,
 				D71F0EF11D4CEF1D004A46B7 /* AudioModel.swift in Sources */,
 				D71F0EEA1D4CEEC2004A46B7 /* VideoGetService.swift in Sources */,
 				D75C69BF1D4FEF0A00AE5274 /* AudioResponseModel.swift in Sources */,

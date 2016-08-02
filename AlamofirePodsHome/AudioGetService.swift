@@ -21,54 +21,58 @@ class AudioGetService {
     var methodNameAudioGet = "audios.get?"
     var methodNameAudioGetPopular = "audio.getPopular?"
     var amper = "&"
-    var accessToken = Url.accessTocken + ""
+    var accessToken = Url.accessTocken
 
     
-    
     func getAudioById1 (owner_id : String) {
-        Alamofire.request(.GET, (mainUrlMethod + methodNameAudioGet + owner_id +  accessToken) )
-            .responseArray { (response: Response<[AudioModel], NSError>) in
-                
-                let audioModelArray = response.result.value
-               
-                print(audioModelArray)
-                
-                
-                
+        Alamofire.request(.GET, (mainUrlMethod + methodNameAudioGet + owner_id + accessToken) )
+            .responseObject { (response: Response<AudioResponseModel, NSError>) in
+                let audioResponseModel = response.result.value
+                if let audioResponseModel = audioResponseModel {
+                    if let audioModel = audioResponseModel.response {
+                        
+                        for value in audioModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
+    
+
 //1 - eng, 0 - all
     // count - count of returned audios
     
     func getPopularAudioCount (only_eng : String, count : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNameAudioGetPopular + only_eng + amper + count +  accessToken) )
-           .responseArray { (response: Response<[AudioModel], NSError>) in
-                
-                //let audioModelArray = response.result.value
-            if let audioModelArray = response.result.value {
-            for value in audioModelArray {
-                print("\(value.artist) + method")
-                 print("\(value.duration) + method")
-                 print(value.genre_id)
-                 print(value.owner_id)
-                 print(value.title)
-                 print(value.url)
-            }
-            }
+            .responseObject { (response: Response<AudioResponseModel, NSError>) in
+                let audioResponseModel = response.result.value
+                if let audioResponseModel = audioResponseModel {
+                    if let audioModel = audioResponseModel.response {
+                        
+                        for value in audioModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
-       // return audioModelArray
-    
-}
+    }
 
     func getPopularAudio (only_eng : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNameAudioGetPopular + only_eng + amper + accessToken) )
-            .responseArray { (response: Response<[AudioModel], NSError>) in
-                
-                let audioModelArray = response.result.value
-                print(audioModelArray)
-                
-                
-                
+            .responseObject { (response: Response<AudioResponseModel, NSError>) in
+                let audioResponseModel = response.result.value
+                if let audioResponseModel = audioResponseModel {
+                    if let audioModel = audioResponseModel.response {
+                        
+                        for value in audioModel {
+                            print (value)
+                            
+                        }
+                    }
+                }
         }
     }
 }
