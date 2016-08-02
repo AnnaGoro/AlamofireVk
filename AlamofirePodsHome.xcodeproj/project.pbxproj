@@ -32,6 +32,8 @@
 		D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */; };
 		D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */; };
 		D75C69C51D5011F400AE5274 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C41D5011F400AE5274 /* WebViewController.swift */; };
+		D75C69C81D502B5F00AE5274 /* StoryboardMail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75C69C71D502B5F00AE5274 /* StoryboardMail.storyboard */; };
+		D75C69CA1D502B7C00AE5274 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C91D502B7C00AE5274 /* MailViewController.swift */; };
 		D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F24E71D4E2ED00024448A /* urlsEn.swift */; };
 		D76F24EA1D4F5BE00024448A /* VKSdkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F24E91D4F5BDF0024448A /* VKSdkDelegate.swift */; };
 		D7D8C65A1D4B61F900DC1A5B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7D8C6591D4B61F900DC1A5B /* Podfile */; };
@@ -88,6 +90,8 @@
 		D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoResponseModel.swift; sourceTree = "<group>"; };
 		D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResponseModel.swift; sourceTree = "<group>"; };
 		D75C69C41D5011F400AE5274 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D75C69C71D502B5F00AE5274 /* StoryboardMail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardMail.storyboard; sourceTree = "<group>"; };
+		D75C69C91D502B7C00AE5274 /* MailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		D76F24E71D4E2ED00024448A /* urlsEn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlsEn.swift; sourceTree = "<group>"; };
 		D76F24E91D4F5BDF0024448A /* VKSdkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKSdkDelegate.swift; sourceTree = "<group>"; };
 		D7D8C6591D4B61F900DC1A5B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -159,6 +163,7 @@
 		D7002EDE1D4AB2D40014728D /* AlamofirePodsHome */ = {
 			isa = PBXGroup;
 			children = (
+				D75C69C61D502B2400AE5274 /* Test3 */,
 				D71F0EF81D4CEF73004A46B7 /* MainApiService.swift */,
 				D71F0EEF1D4CEF06004A46B7 /* Model */,
 				D71F0EE61D4CEE22004A46B7 /* API */,
@@ -221,6 +226,15 @@
 				D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D75C69C61D502B2400AE5274 /* Test3 */ = {
+			isa = PBXGroup;
+			children = (
+				D75C69C71D502B5F00AE5274 /* StoryboardMail.storyboard */,
+				D75C69C91D502B7C00AE5274 /* MailViewController.swift */,
+			);
+			name = Test3;
 			sourceTree = "<group>";
 		};
 		DF69DEFFC658DA0FA5661093 /* Frameworks */ = {
@@ -338,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75C69C81D502B5F00AE5274 /* StoryboardMail.storyboard in Resources */,
 				D7002EEA1D4AB2D50014728D /* LaunchScreen.storyboard in Resources */,
 				D7002EE71D4AB2D50014728D /* Assets.xcassets in Resources */,
 				D7D8C65A1D4B61F900DC1A5B /* Podfile in Resources */,
@@ -432,6 +447,7 @@
 				D71F0EE81D4CEE50004A46B7 /* AudioGetService.swift in Sources */,
 				D7002EE01D4AB2D50014728D /* AppDelegate.swift in Sources */,
 				D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */,
+				D75C69CA1D502B7C00AE5274 /* MailViewController.swift in Sources */,
 				D76F24EA1D4F5BE00024448A /* VKSdkDelegate.swift in Sources */,
 				D71F0EF71D4CEF4A004A46B7 /* UserModel.swift in Sources */,
 				D75C69BD1D4FEE8600AE5274 /* UserResponseModel.swift in Sources */,
