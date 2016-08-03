@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -67,6 +68,7 @@
                         <viewControllerLayoutGuide type="bottom" id="J0s-q9-0OP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nx7-Mk-K4c">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qqh-Bt-JWV">
@@ -76,6 +78,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="80" id="2xa-2U-iqv" customClass="CustomCellUser" customModule="AlamofirePodsHome" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2xa-2U-iqv" id="CDl-Ac-Uae">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ao-ve-7iU">
@@ -90,8 +93,7 @@
                                                             <exclude reference="nBK-pQ-KXc"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="14" y="7" width="62" height="64"/>
+                                                    <variation key="widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="LV2-Ch-xKb"/>
                                                             <include reference="nBK-pQ-KXc"/>
@@ -137,22 +139,12 @@
                                                             <exclude reference="RYE-s9-Mjj"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact" alignment="top" axis="vertical" misplaced="YES">
-                                                        <rect key="frame" x="89" y="9" width="79" height="60"/>
+                                                    <variation key="widthClass=compact" alignment="top" axis="vertical">
                                                         <mask key="constraints">
                                                             <include reference="RYE-s9-Mjj"/>
                                                         </mask>
                                                     </variation>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-VK-m2j">
-                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="218" y="29" width="174" height="21"/>
-                                                    </variation>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="aTL-H1-kHc" firstAttribute="leading" secondItem="5Ao-ve-7iU" secondAttribute="trailing" constant="8" id="F52-ka-Cso"/>
@@ -164,7 +156,6 @@
                                                 <mask key="subviews">
                                                     <exclude reference="5Ao-ve-7iU"/>
                                                     <exclude reference="aTL-H1-kHc"/>
-                                                    <exclude reference="Elq-VK-m2j"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="PIY-kW-q9n"/>
@@ -177,7 +168,6 @@
                                                 <mask key="subviews">
                                                     <include reference="5Ao-ve-7iU"/>
                                                     <include reference="aTL-H1-kHc"/>
-                                                    <include reference="Elq-VK-m2j"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="PIY-kW-q9n"/>
@@ -192,13 +182,9 @@
                                             <outlet property="firstNameLabel" destination="IgT-2q-YXt" id="4Dd-KZ-vpO"/>
                                             <outlet property="lastNameLabel" destination="tIJ-fQ-Wru" id="HbH-xn-xFh"/>
                                             <outlet property="thumbNailImageView" destination="5Ao-ve-7iU" id="wWS-Lg-TPU"/>
-                                            <outlet property="urlsTest" destination="Elq-VK-m2j" id="aC2-Cm-HMV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="G8f-GE-wj7" id="RVj-fg-dqH"/>
                                     <outlet property="delegate" destination="G8f-GE-wj7" id="gNd-8n-txM"/>
@@ -217,10 +203,10 @@
                                 <exclude reference="qqh-Bt-JWV"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="IUp-ky-Way"/>
                                 <exclude reference="BKa-aF-tMb"/>
                                 <exclude reference="GIo-LA-Wln"/>
                                 <exclude reference="bST-Nm-IYh"/>
-                                <exclude reference="IUp-ky-Way"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -228,10 +214,10 @@
                                 <include reference="qqh-Bt-JWV"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="IUp-ky-Way"/>
                                 <include reference="BKa-aF-tMb"/>
                                 <include reference="GIo-LA-Wln"/>
                                 <include reference="bST-Nm-IYh"/>
-                                <include reference="IUp-ky-Way"/>
                             </mask>
                         </variation>
                     </view>

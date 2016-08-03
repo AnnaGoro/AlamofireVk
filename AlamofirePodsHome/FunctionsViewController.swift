@@ -78,10 +78,7 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
         cell.firstNameLabel?.text = arrayFirstNames[indexPath.row]
         cell.lastNameLabel?.text = arrayLastNames[indexPath.row]
         cell.bDateLabel?.text = arrayBdates[indexPath.row]
-        cell.urlsTest?.text = arrayUrlsPhoto[indexPath.row]
-        
-       // cell.thumbNailImageView?.image = UIImage(named: "img_nature")
-        
+           
          let URL = arrayUrlsPhoto[indexPath.row]
          let placeholder = UIImage(named: "img_nature")!
          cell.thumbNailImageView.load(URL, placeholder: placeholder) { URL, image, error, cacheType in

@@ -15,7 +15,7 @@ class CustomCellUser: UITableViewCell {
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var bDateLabel: UILabel!
     
-    @IBOutlet weak var urlsTest: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
