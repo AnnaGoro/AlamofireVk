@@ -13,6 +13,7 @@ import ImageLoader
 class FunctionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
     
+    @IBOutlet weak var goToHorizontalCV: UIButton!
     @IBOutlet weak var tableData: UITableView!
     
     
@@ -92,10 +93,12 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
          transition.type = kCATransitionFade
          cell.thumbNailImageView.layer.addAnimation(transition, forKey: nil)
          cell.thumbNailImageView.image = image
-         cell.thumbNailImageView.layer.cornerRadius = 30.0
-         cell.thumbNailImageView.clipsToBounds = true
+        
             
          }
+            
+            cell.thumbNailImageView.layer.cornerRadius = 30.0
+            cell.thumbNailImageView.clipsToBounds = true
          }
          
  

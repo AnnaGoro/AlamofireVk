@@ -50,7 +50,7 @@ class UserGetService {
         
          let url = "https://api.vk.com/method/users.get?"
        // let url = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53"
-        Alamofire.request(.GET, url, parameters: ["user_ids" : "210700286, 210704486, 210560286, 210700226, 210715686", "fields" : "bdate, photo_50", "v":"5.53", "access_token":accessToken] ).validate()
+        Alamofire.request(.GET, url, parameters: ["user_ids" : "210700286, 210704486, 210560286, 210700226, 210715686, 210615686, 229315686, 210415686, 210712286, 210715685, 210715684, 210715683", "fields" : "bdate, photo_50", "v":"5.53", "access_token":accessToken] ).validate()
         //Alamofire.request(.GET, url).validate()
             .responseObject { (response: Response<UserResponseModel, NSError>) in
                 let userResponseModel = response.result.value
