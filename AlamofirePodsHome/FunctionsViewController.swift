@@ -24,7 +24,11 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
          print("getPopularAudioCount(only_eng=1, count: count=10)")
         audioGetService.getPopularAudioCount("only_eng=1", count: "count=10")
         
-        userGetService.getUserById1()
+        userGetService.getUserById1() { (data) in
+            print ("get user by id\(data.1.toJSONString())   \(data.0)")
+        
+        
+        }
         
         
     }

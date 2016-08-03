@@ -44,7 +44,9 @@ class UserGetService {
     
     
     
-    func getUserById1() {
+    func getUserById1(completionHandler: (Bool, [UserModel]) -> ()) {
+        
+        var myData: [UserModel] = [UserModel]()
         
          let url = "https://api.vk.com/method/users.get?"
        // let url = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53"
@@ -55,14 +57,21 @@ class UserGetService {
                 print("getUserById1 before unwrapping")
                 if let userResponseModel = userResponseModel {
                     if let userModel = userResponseModel.response {
-                       self.array = userModel
-                        for value in userModel {
+                        myData = userModel
+                        completionHandler(true, (myData))
+                        
+                        
+                        //callback(Result.Success(userModel))
+                        
+                      /*  for value in userModel {
                             print("getUserById1 ")
                             print (value)
                             print (value.first_name)
                              print (value.last_name)
                              print(value.id)
+ 
                         }
+ */
                     }
                 }
         } 
