@@ -144,6 +144,15 @@
                                                         </mask>
                                                     </variation>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-VK-m2j">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="218" y="29" width="174" height="21"/>
+                                                    </variation>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="aTL-H1-kHc" firstAttribute="leading" secondItem="5Ao-ve-7iU" secondAttribute="trailing" constant="8" id="F52-ka-Cso"/>
@@ -155,6 +164,7 @@
                                                 <mask key="subviews">
                                                     <exclude reference="5Ao-ve-7iU"/>
                                                     <exclude reference="aTL-H1-kHc"/>
+                                                    <exclude reference="Elq-VK-m2j"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="PIY-kW-q9n"/>
@@ -167,6 +177,7 @@
                                                 <mask key="subviews">
                                                     <include reference="5Ao-ve-7iU"/>
                                                     <include reference="aTL-H1-kHc"/>
+                                                    <include reference="Elq-VK-m2j"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="PIY-kW-q9n"/>
@@ -181,6 +192,7 @@
                                             <outlet property="firstNameLabel" destination="IgT-2q-YXt" id="4Dd-KZ-vpO"/>
                                             <outlet property="lastNameLabel" destination="tIJ-fQ-Wru" id="HbH-xn-xFh"/>
                                             <outlet property="thumbNailImageView" destination="5Ao-ve-7iU" id="wWS-Lg-TPU"/>
+                                            <outlet property="urlsTest" destination="Elq-VK-m2j" id="aC2-Cm-HMV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

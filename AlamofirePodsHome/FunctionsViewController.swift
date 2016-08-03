@@ -8,13 +8,23 @@
 
 import Foundation
 import UIKit
+import ImageLoader
 
 class FunctionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
     
     @IBOutlet weak var tableData: UITableView!
+    
+    
     //let array = ["1", "02", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]
-    var array: [String] = [String] ()
+    var arrayFirstNames: [String] = [String] ()
+    
+    var arrayLastNames: [String] = [String] ()
+    
+    var arrayUrlsPhoto: [String] = [String] ()
+    
+     var arrayBdates: [String] = [String] ()
+    
     var audioGetService = AudioGetService()
     var userGetService = UserGetService()
     
@@ -22,18 +32,18 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // var owner_id = "owner_id=" + NSUserDefaults.standardUserDefaults().stringForKey("user_id")!
-        //print("getAudioById1 (owner_id)")
-        // audioGetService.getAudioById1 (owner_id)
-        // print("getPopularAudioCount(only_eng=1, count: count=10)")
-        //audioGetService.getPopularAudioCount("only_eng=1", count: "count=10")
         
         userGetService.getUserById1() { (data) in
             var userModelArray = data.1
             for value in userModelArray {
             
-            self.array.append(value.first_name!)
-            
+            self.arrayFirstNames.append(value.first_name!)
+            self.arrayLastNames.append(value.last_name!)
+            var theAnswer = value.bdate ?? "no bDate"
+            self.arrayBdates.append(theAnswer)
+            self.arrayUrlsPhoto.append(value.photo_50!)
+                
+                
             }
             
             self.tableData.reloadData()
@@ -56,7 +66,7 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
     
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return array.count
+      return arrayFirstNames.count
     }
     
     
@@ -65,11 +75,41 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! CustomCellUser
         
-        cell.firstNameLabel?.text = array[indexPath.row]
-        cell.thumbNailImageView?.image = UIImage(named: "img_nature")
+        cell.firstNameLabel?.text = arrayFirstNames[indexPath.row]
+        cell.lastNameLabel?.text = arrayLastNames[indexPath.row]
+        cell.bDateLabel?.text = arrayBdates[indexPath.row]
+        cell.urlsTest?.text = arrayUrlsPhoto[indexPath.row]
         
+       // cell.thumbNailImageView?.image = UIImage(named: "img_nature")
+        
+         let URL = arrayUrlsPhoto[indexPath.row]
+         let placeholder = UIImage(named: "img_nature")!
+         cell.thumbNailImageView.load(URL, placeholder: placeholder) { URL, image, error, cacheType in
+         print("URL \(URL)")
+         print("error \(error)")
+         print("image \(image?.size), render-image \(cell.thumbNailImageView.image?.size)")
+         print("cacheType \(cacheType.hashValue)")
+         if cacheType == CacheType.None {
+         let transition = CATransition()
+         transition.duration = 0.5
+         transition.type = kCATransitionFade
+         cell.thumbNailImageView.layer.addAnimation(transition, forKey: nil)
+         cell.thumbNailImageView.image = image
          cell.thumbNailImageView.layer.cornerRadius = 30.0
          cell.thumbNailImageView.clipsToBounds = true
+            
+         }
+         }
+         
+ 
+        
+        
+        
+        
+        
+        
+        
+       
         return cell
     }
     

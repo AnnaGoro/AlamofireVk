@@ -7,6 +7,7 @@ PODS:
     - Alamofire (~> 3.2)
     - ObjectMapper (~> 1.0)
   - EVReflection (2.42.2)
+  - ImageLoader (0.9.0)
   - ObjectMapper (1.3.0)
   - VK-ios-sdk (1.4.3)
 
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - Alamofire (~> 3.4)
   - AlamofireJsonToObjects
   - AlamofireObjectMapper (~> 3.0)
+  - ImageLoader
   - VK-ios-sdk
 
 SPEC CHECKSUMS:
@@ -21,9 +23,10 @@ SPEC CHECKSUMS:
   AlamofireJsonToObjects: e5155c1c58493c44d7ebe56bbb1aa65d95e82c68
   AlamofireObjectMapper: 70f97cbf45c01c48d26aa07a1a7059a60ed7411d
   EVReflection: 82ca5595f84e51474017eb11ebecc4a67bb151cb
+  ImageLoader: bb709e5b2708158da405760f42c75e7e52b561b5
   ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
   VK-ios-sdk: 7b278cc3f758be0054d8442efb063c2752bd7efc
 
-PODFILE CHECKSUM: d3b0443aa81c38f01de6bc0860cb4fca080e6b1c
+PODFILE CHECKSUM: 4105128168d8fb42b543a7e19c45e0a3819c21e6
 
 COCOAPODS: 1.0.1

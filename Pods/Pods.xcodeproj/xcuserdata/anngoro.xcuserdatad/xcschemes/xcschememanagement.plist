@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ImageLoader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,17 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>15FF3DE3EC3F68AB530C6084DD49F451</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>22715591BF76735F45232AB79B87B69A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>25823D362813695B411CEB39F7D4CD56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>503F6F7D38224D2B604AA76A47AF1656</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,12 +72,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>973AF7673CFC11B9CCF60D3D4C7615E0</key>
+		<key>AD53FFE97D4F26A2958E3F6E5CFCD830</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C5CBCAA97E951CC882334464FBDF983D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CC1C881C9BB5B283D9E421BA2DAA649B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2508313580687A9FE889B61D19EB6E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
