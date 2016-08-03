@@ -46,9 +46,13 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        let cellId = "Cell"
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! CustomCellUser
         
-        cell.textLabel?.text = array[indexPath.row]
+        cell.firstNameLabel?.text = array[indexPath.row]
+        cell.thumbNailImageView?.image = UIImage(named: "img_nature")
+        
+         cell.thumbNailImageView.layer.cornerRadius = 30.0
+         cell.thumbNailImageView.clipsToBounds = true
         return cell
     }
     

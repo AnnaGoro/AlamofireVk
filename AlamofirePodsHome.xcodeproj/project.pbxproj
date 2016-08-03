@@ -16,6 +16,7 @@
 		D7002EF51D4AB2D60014728D /* AlamofirePodsHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7002EF41D4AB2D60014728D /* AlamofirePodsHomeTests.swift */; };
 		D7002F001D4AB2D70014728D /* AlamofirePodsHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7002EFF1D4AB2D70014728D /* AlamofirePodsHomeUITests.swift */; };
 		D70B1CBF1D514D7E0068E1E7 /* FunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B1CBE1D514D7D0068E1E7 /* FunctionsViewController.swift */; };
+		D70B1CC11D520B1C0068E1E7 /* CustomCellUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B1CC01D520B1C0068E1E7 /* CustomCellUser.swift */; };
 		D71F0EE81D4CEE50004A46B7 /* AudioGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EE71D4CEE50004A46B7 /* AudioGetService.swift */; };
 		D71F0EEA1D4CEEC2004A46B7 /* VideoGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EE91D4CEEC2004A46B7 /* VideoGetService.swift */; };
 		D71F0EEC1D4CEED0004A46B7 /* UserGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EEB1D4CEED0004A46B7 /* UserGetService.swift */; };
@@ -75,6 +76,7 @@
 		D7002EFF1D4AB2D70014728D /* AlamofirePodsHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofirePodsHomeUITests.swift; sourceTree = "<group>"; };
 		D7002F011D4AB2D70014728D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D70B1CBE1D514D7D0068E1E7 /* FunctionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsViewController.swift; sourceTree = "<group>"; };
+		D70B1CC01D520B1C0068E1E7 /* CustomCellUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellUser.swift; sourceTree = "<group>"; };
 		D71F0EE71D4CEE50004A46B7 /* AudioGetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioGetService.swift; sourceTree = "<group>"; };
 		D71F0EE91D4CEEC2004A46B7 /* VideoGetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGetService.swift; sourceTree = "<group>"; };
 		D71F0EEB1D4CEED0004A46B7 /* UserGetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGetService.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				D7E8017F1D4FB64A00D373E1 /* FuckingModelsTest.swift */,
 				D75C69C41D5011F400AE5274 /* WebViewController.swift */,
 				D70B1CBE1D514D7D0068E1E7 /* FunctionsViewController.swift */,
+				D70B1CC01D520B1C0068E1E7 /* CustomCellUser.swift */,
 			);
 			path = AlamofirePodsHome;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				D75C69CA1D502B7C00AE5274 /* MailViewController.swift in Sources */,
 				D76F24EA1D4F5BE00024448A /* VKSdkDelegate.swift in Sources */,
 				D71F0EF71D4CEF4A004A46B7 /* UserModel.swift in Sources */,
+				D70B1CC11D520B1C0068E1E7 /* CustomCellUser.swift in Sources */,
 				D75C69BD1D4FEE8600AE5274 /* UserResponseModel.swift in Sources */,
 				D71F0EFD1D4D679B004A46B7 /* ApiError.swift in Sources */,
 				D71F0EEE1D4CEEE6004A46B7 /* PhotoGetService.swift in Sources */,
