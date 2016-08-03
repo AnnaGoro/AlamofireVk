@@ -10,7 +10,7 @@ import Foundation
 
 class Url {
     
-  static var accessTocken: String = "access_token=" + NSUserDefaults.standardUserDefaults().stringForKey("access_token")! 
+  static var accessTocken: String = NSUserDefaults.standardUserDefaults().stringForKey("access_token")! 
    
     
   static var mainUrl = "https://api.vk.com/method/"

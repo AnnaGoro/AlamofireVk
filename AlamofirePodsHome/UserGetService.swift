@@ -20,7 +20,7 @@ class UserGetService {
     var methodName = "users.get?"
     var amper = "&"
     var accessToken = Url.accessTocken
-    
+    var array: [UserModel] = []
     
     
     //var parameterUserId = "user_ids=210700286"
@@ -46,28 +46,27 @@ class UserGetService {
     
     func getUserById1() {
         
-        // let url = "https://api.vk.com/method/users.get?"
-        let url = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53"
-        // Alamofire.request(.GET, url, parameters: ["user_ids" : "210700286", "fields" : "bdate", "v":"5.53"] )
-        Alamofire.request(.GET, url).validate()
+         let url = "https://api.vk.com/method/users.get?"
+       // let url = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.53"
+         Alamofire.request(.GET, url, parameters: ["user_ids" : "210700286", "fields" : "bdate", "v":"5.53", "access_token":accessToken] ).validate()
+        //Alamofire.request(.GET, url).validate()
             .responseObject { (response: Response<UserResponseModel, NSError>) in
                 let userResponseModel = response.result.value
                 print("getUserById1 before unwrapping")
                 if let userResponseModel = userResponseModel {
                     if let userModel = userResponseModel.response {
-                        
+                       self.array = userModel
                         for value in userModel {
                             print("getUserById1 ")
                             print (value)
-                            //  print (value.first_name)
-                            // print (value.last_name)
-                            //  print(value.id)
+                            print (value.first_name)
+                             print (value.last_name)
+                             print(value.id)
                         }
                     }
                 }
-        }
-        
-    }
+        } 
+             }
     
     func getUserById(parameterUserId : String) {
         

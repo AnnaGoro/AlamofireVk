@@ -32,7 +32,7 @@ class AudioGetService {
                     if let audioModel = audioResponseModel.response {
                         
                         for value in audioModel {
-                            print (value)
+                            print (value.title)
                             
                         }
                     }
@@ -52,7 +52,7 @@ class AudioGetService {
                     if let audioModel = audioResponseModel.response {
                         
                         for value in audioModel {
-                            print (value)
+                            print (value.title)
                             
                         }
                     }

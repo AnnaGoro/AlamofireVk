@@ -15,6 +15,7 @@
 		D7002EEA1D4AB2D50014728D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7002EE81D4AB2D50014728D /* LaunchScreen.storyboard */; };
 		D7002EF51D4AB2D60014728D /* AlamofirePodsHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7002EF41D4AB2D60014728D /* AlamofirePodsHomeTests.swift */; };
 		D7002F001D4AB2D70014728D /* AlamofirePodsHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7002EFF1D4AB2D70014728D /* AlamofirePodsHomeUITests.swift */; };
+		D70B1CBF1D514D7E0068E1E7 /* FunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B1CBE1D514D7D0068E1E7 /* FunctionsViewController.swift */; };
 		D71F0EE81D4CEE50004A46B7 /* AudioGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EE71D4CEE50004A46B7 /* AudioGetService.swift */; };
 		D71F0EEA1D4CEEC2004A46B7 /* VideoGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EE91D4CEEC2004A46B7 /* VideoGetService.swift */; };
 		D71F0EEC1D4CEED0004A46B7 /* UserGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EEB1D4CEED0004A46B7 /* UserGetService.swift */; };
@@ -73,6 +74,7 @@
 		D7002EFB1D4AB2D70014728D /* AlamofirePodsHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlamofirePodsHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7002EFF1D4AB2D70014728D /* AlamofirePodsHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofirePodsHomeUITests.swift; sourceTree = "<group>"; };
 		D7002F011D4AB2D70014728D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D70B1CBE1D514D7D0068E1E7 /* FunctionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsViewController.swift; sourceTree = "<group>"; };
 		D71F0EE71D4CEE50004A46B7 /* AudioGetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioGetService.swift; sourceTree = "<group>"; };
 		D71F0EE91D4CEEC2004A46B7 /* VideoGetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGetService.swift; sourceTree = "<group>"; };
 		D71F0EEB1D4CEED0004A46B7 /* UserGetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGetService.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				D7E8017D1D4FB61C00D373E1 /* FuckingTest.swift */,
 				D7E8017F1D4FB64A00D373E1 /* FuckingModelsTest.swift */,
 				D75C69C41D5011F400AE5274 /* WebViewController.swift */,
+				D70B1CBE1D514D7D0068E1E7 /* FunctionsViewController.swift */,
 			);
 			path = AlamofirePodsHome;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70B1CBF1D514D7E0068E1E7 /* FunctionsViewController.swift in Sources */,
 				D71F0EF51D4CEF3C004A46B7 /* PhotoModel.swift in Sources */,
 				D75C69C51D5011F400AE5274 /* WebViewController.swift in Sources */,
 				D71F0EF11D4CEF1D004A46B7 /* AudioModel.swift in Sources */,
