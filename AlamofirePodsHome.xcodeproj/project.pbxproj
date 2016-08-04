@@ -18,6 +18,8 @@
 		D7060D2D1D52872C006AE80C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7060D2C1D52872C006AE80C /* CollectionViewCell.swift */; };
 		D7060D2F1D528771006AE80C /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7060D2E1D528771006AE80C /* NewViewController.swift */; };
 		D7060D311D529348006AE80C /* ViewControllerCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7060D301D529348006AE80C /* ViewControllerCollection.swift */; };
+		D7060D331D52B43D006AE80C /* AudiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7060D321D52B43D006AE80C /* AudiosViewController.swift */; };
+		D7060D351D52BC3B006AE80C /* CustomCellAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7060D341D52BC3B006AE80C /* CustomCellAudio.swift */; };
 		D70B1CBF1D514D7E0068E1E7 /* FunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B1CBE1D514D7D0068E1E7 /* FunctionsViewController.swift */; };
 		D70B1CC11D520B1C0068E1E7 /* CustomCellUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B1CC01D520B1C0068E1E7 /* CustomCellUser.swift */; };
 		D71F0EE81D4CEE50004A46B7 /* AudioGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EE71D4CEE50004A46B7 /* AudioGetService.swift */; };
@@ -81,6 +83,8 @@
 		D7060D2C1D52872C006AE80C /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D7060D2E1D528771006AE80C /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		D7060D301D529348006AE80C /* ViewControllerCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCollection.swift; sourceTree = "<group>"; };
+		D7060D321D52B43D006AE80C /* AudiosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiosViewController.swift; sourceTree = "<group>"; };
+		D7060D341D52BC3B006AE80C /* CustomCellAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellAudio.swift; sourceTree = "<group>"; };
 		D70B1CBE1D514D7D0068E1E7 /* FunctionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsViewController.swift; sourceTree = "<group>"; };
 		D70B1CC01D520B1C0068E1E7 /* CustomCellUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellUser.swift; sourceTree = "<group>"; };
 		D71F0EE71D4CEE50004A46B7 /* AudioGetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioGetService.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				D7060D2C1D52872C006AE80C /* CollectionViewCell.swift */,
 				D7060D2E1D528771006AE80C /* NewViewController.swift */,
 				D7060D301D529348006AE80C /* ViewControllerCollection.swift */,
+				D7060D321D52B43D006AE80C /* AudiosViewController.swift */,
+				D7060D341D52BC3B006AE80C /* CustomCellAudio.swift */,
 			);
 			path = AlamofirePodsHome;
 			sourceTree = "<group>";
@@ -456,6 +462,7 @@
 				D70B1CBF1D514D7E0068E1E7 /* FunctionsViewController.swift in Sources */,
 				D71F0EF51D4CEF3C004A46B7 /* PhotoModel.swift in Sources */,
 				D75C69C51D5011F400AE5274 /* WebViewController.swift in Sources */,
+				D7060D351D52BC3B006AE80C /* CustomCellAudio.swift in Sources */,
 				D71F0EF11D4CEF1D004A46B7 /* AudioModel.swift in Sources */,
 				D71F0EEA1D4CEEC2004A46B7 /* VideoGetService.swift in Sources */,
 				D75C69BF1D4FEF0A00AE5274 /* AudioResponseModel.swift in Sources */,
@@ -466,6 +473,7 @@
 				D71F0EFB1D4CF0FA004A46B7 /* AuthorizationService.swift in Sources */,
 				D7E801801D4FB64A00D373E1 /* FuckingModelsTest.swift in Sources */,
 				D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */,
+				D7060D331D52B43D006AE80C /* AudiosViewController.swift in Sources */,
 				D7002EE21D4AB2D50014728D /* ViewController.swift in Sources */,
 				D71F0EF31D4CEF2C004A46B7 /* VideoModel.swift in Sources */,
 				D71F0EF91D4CEF73004A46B7 /* MainApiService.swift in Sources */,

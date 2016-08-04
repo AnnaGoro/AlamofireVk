@@ -77,7 +77,7 @@
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xaU-X3-Jph">
                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
+                                    <state key="normal" title="collection of users"/>
                                     <connections>
                                         <segue destination="Ebp-hI-zoA" kind="show" id="Vby-mN-RQn"/>
                                     </connections>
@@ -192,6 +192,16 @@
                                     <outlet property="delegate" destination="G8f-GE-wj7" id="gNd-8n-txM"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpe-Iu-BhR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="audios"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="144" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="y2a-Kg-Hfk" kind="show" id="iCh-qG-WXR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -203,6 +213,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="qqh-Bt-JWV"/>
+                                <exclude reference="tpe-Iu-BhR"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="IUp-ky-Way"/>
@@ -214,6 +225,7 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="qqh-Bt-JWV"/>
+                                <include reference="tpe-Iu-BhR"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="IUp-ky-Way"/>
@@ -232,6 +244,90 @@
             </objects>
             <point key="canvasLocation" x="990" y="150"/>
         </scene>
+        <!--Audios View Controller-->
+        <scene sceneID="DEZ-Vz-mcM">
+            <objects>
+                <viewController id="y2a-Kg-Hfk" customClass="AudiosViewController" customModule="AlamofirePodsHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e20-R5-gPo"/>
+                        <viewControllerLayoutGuide type="bottom" id="ae2-j5-ZRM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Waa-jm-gRb">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N7p-c0-Y7d">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rvC-bZ-58D">
+                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="CollectionUsers"/>
+                                    <connections>
+                                        <segue destination="Ebp-hI-zoA" kind="show" id="2ZM-hK-Hj4"/>
+                                    </connections>
+                                </button>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellAudios" id="miK-xf-XGh" customClass="CustomCellAudio" customModule="AlamofirePodsHome" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="miK-xf-XGh" id="3WT-9N-3gX">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh2-by-oiX">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="11" width="400" height="21"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="Gh2-by-oiX"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="Gh2-by-oiX"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="audioLabel" destination="Gh2-by-oiX" id="TeS-bV-thY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="y2a-Kg-Hfk" id="fMr-Qp-Pqw"/>
+                                    <outlet property="delegate" destination="y2a-Kg-Hfk" id="RQC-rQ-toh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="N7p-c0-Y7d"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="N7p-c0-Y7d"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableData" destination="N7p-c0-Y7d" id="TCt-yG-4GD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHc-lc-gNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="955"/>
+        </scene>
         <!--UICollectionView-->
         <scene sceneID="1yB-fr-fHm">
             <objects>
@@ -246,7 +342,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="47K-uH-4p0">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rLq-92-t4m">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rLq-92-t4m">
                                     <size key="itemSize" width="83" height="152"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -369,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9m-Xd-ZD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1651.5" y="150"/>
+            <point key="canvasLocation" x="1879.5" y="158"/>
         </scene>
         <!--New View Controller-->
         <scene sceneID="bg7-gi-ogk">
@@ -446,4 +542,7 @@
             <point key="canvasLocation" x="3315" y="150"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2ZM-hK-Hj4"/>
+    </inferredMetricsTieBreakers>
 </document>

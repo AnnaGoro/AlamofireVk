@@ -43,18 +43,18 @@ class AudioGetService {
 
 //1 - eng, 0 - all
     // count - count of returned audios
-    
-    func getPopularAudioCount (only_eng : String, count : String) {
-        Alamofire.request(.GET, (mainUrlMethod + methodNameAudioGetPopular + only_eng + amper + count +  accessToken) )
+    var only_eng = "only_eng=1"
+    func getPopularAudioCount (completionHandler: (Bool, [AudioModel]) -> ()) {
+        var audioArray: [AudioModel] = [AudioModel]()
+        
+        Alamofire.request(.GET, (mainUrlMethod + methodNameAudioGetPopular + only_eng + amper + accessToken) ).validate()
             .responseObject { (response: Response<AudioResponseModel, NSError>) in
                 let audioResponseModel = response.result.value
                 if let audioResponseModel = audioResponseModel {
+                   
                     if let audioModel = audioResponseModel.response {
-                        
-                        for value in audioModel {
-                            print (value.title)
-                            
-                        }
+                         audioArray = audioModel
+                         completionHandler(true, (audioArray))
                     }
                 }
         }
