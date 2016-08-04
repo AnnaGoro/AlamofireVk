@@ -30,16 +30,16 @@ class AudioModel:Mappable {
     }
     
     func mapping(map: Map) {
-        id <- (map["id"], transformStringToInt )
-        owner_id <- (map["owner_id"], transformStringToInt )
+        id <- (map["id"])
+        owner_id <- (map["owner_id"])
         title <- map["title"]
-        duration <- (map["duration"], transformStringToInt)
+        duration <- (map["duration"])
         url <- map["url"]
-        lyrics_id <- (map["lyrics_id"], transformStringToInt)
-        album_id <- (map["album_id"], transformStringToInt )
-        genre_id <- (map["genre_id"], transformStringToInt )
+        lyrics_id <- (map["lyrics_id"])
+        album_id <- (map["album_id"] )
+        genre_id <- (map["genre_id"])
         date <- (map["date"], DateTransform() )
-        no_search <- (map["no_search"], transformStringToInt )
+        no_search <- (map["no_search"] )
     }
 
     

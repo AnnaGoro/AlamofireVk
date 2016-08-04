@@ -21,8 +21,27 @@ class AudioGetService {
     var methodNameAudioGet = "audios.get?"
     var methodNameAudioGetPopular = "audio.getPopular?"
     var amper = "&"
-    var accessToken = Url.accessTocken
+    var accessToken = "access_token=" + Url.accessTocken
 
+    
+    
+    
+    func getAudioByIdJSON() {
+        
+        let url = "https://api.vk.com/method/users.get?"
+        
+        
+        Alamofire.request(.GET,  (mainUrlMethod + methodNameAudioGetPopular + only_eng + amper + accessToken) ).validate()
+            .responseJSON { response in
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
+    }
+    
+
+    
     
     func getAudioById1 (owner_id : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNameAudioGet + owner_id + accessToken) )

@@ -34,6 +34,12 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        audioGetService.getAudioByIdJSON()
+        
+        
+        
+        
         userGetService.getUserById1() { (data) in
             var userModelArray = data.1
             for value in userModelArray {
