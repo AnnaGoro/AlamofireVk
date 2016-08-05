@@ -102,6 +102,7 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
                 destinationController.lastName = userModelArray[indexPath.row].last_name!
                 destinationController.bDate = userModelArray[indexPath.row].bdate ?? "no bDate"
                 destinationController.url = userModelArray[indexPath.row].photo_200_orig!
+                destinationController.userFriendId = userModelArray[indexPath.row].user_id!
                  var s = userModelArray[indexPath.row].user_id
                 print ("********* id \(s)")
                
