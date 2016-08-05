@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
     var bDate = ""
     var firstName = ""
     var lastName = ""
-    var index = 0
+    var userFriendId: Int = 0
     var url = ""
     
     override func viewDidLoad() {
@@ -33,8 +33,11 @@ class DetailViewController: UIViewController {
         lastNameLabel.text = lastName
         firstNameLabel.text = firstName
         imageView.load(url)
-        imageView.layer.cornerRadius = 35.0
+        imageView.layer.cornerRadius = 100.0
         imageView.clipsToBounds = true
+        
+        print (userFriendId)
+        
     }
     
     

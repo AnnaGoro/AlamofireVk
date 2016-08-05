@@ -12,14 +12,13 @@ class ViewController : UIViewController, UIWebViewDelegate{
     
    // @IBOutlet weak var okBtn: UIButton!
     @IBOutlet weak var authWebView: UIWebView!
-    var webViewController = WebViewController()
+    //var webViewController = WebViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
          //okBtn.enabled = false
-         authWebView.delegate = self
-        
-      //  let defaults = NSUserDefaults.standardUserDefaults()
+        authWebView.delegate = self
+  
        
         
         let myURL = NSURL(string: Authorization.REQUEST_STR);
@@ -32,8 +31,8 @@ class ViewController : UIViewController, UIWebViewDelegate{
                 print ("load request")
                // okBtn.enabled = true
         } else {
-        
-             self.shouldPerformSegueWithIdentifier("showFriends", sender: self)
+        // EDITED FROM shouldPerformSegueWithIdentifier
+             goToFriends()
                 print ("showFriends")
                // okBtn.enabled = true
             
@@ -84,5 +83,10 @@ class ViewController : UIViewController, UIWebViewDelegate{
            
                    }
     }
-
+    func goToFriends() {
+        
+        performSegueWithIdentifier("showFriends", sender: authWebView)
+    }
+    
+    
 }

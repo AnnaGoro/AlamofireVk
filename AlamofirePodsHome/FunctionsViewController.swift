@@ -21,6 +21,7 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userGetService.getFriendsJSON ()
         
         userGetService.getFriends() { (data) in
             var userModelArray = data.1
@@ -32,6 +33,7 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
             
             print ("get user by id \(data.1[0].toJSONString())   \(data.0)")
             print ("get user from array \(userModelArray[0].first_name)   \(data.0)")
+            print ("get id from array \(userModelArray[0].id)   \(data.0)")
             
         }
         
@@ -99,11 +101,10 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
                 destinationController.firstName = userModelArray[indexPath.row].first_name!
                 destinationController.lastName = userModelArray[indexPath.row].last_name!
                 destinationController.bDate = userModelArray[indexPath.row].bdate ?? "no bDate"
-                
-                destinationController.url = userModelArray[indexPath.row].photo_50!
-                
-                
-                
+                destinationController.url = userModelArray[indexPath.row].photo_200_orig!
+                 var s = userModelArray[indexPath.row].user_id
+                print ("********* id \(s)")
+               
             }
     }
     

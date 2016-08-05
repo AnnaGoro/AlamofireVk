@@ -32,19 +32,19 @@ class UserModel: Mappable {
     var interests : String?
     var home_town : String?
     
-    
-
-  //   var transform = TransformOf<Int, String>(fromJSON: { Int($0!) }, toJSON: { $0.map { String($0) } })
+    var photo_200_orig : String?
+    var user_id : Int?
+     
     
     
     required init?(_ map: Map){
-       // mapping(map)
+       
     }
     
 
     
     func mapping(map: Map) {
-         id <- (map["id"])
+         id <- map["id"]
          first_name <- map["first_name"]
          last_name <- map["last_name"]
          photo_50 <- map["photo_50"]
@@ -54,7 +54,8 @@ class UserModel: Mappable {
          books <- map["books"]
          interests <- map["interests"]
          home_town <- map["home_town"]
-        
+         photo_200_orig <- map["photo_200_orig"]
+         user_id <- map["user_id"]
     }
     
     /*

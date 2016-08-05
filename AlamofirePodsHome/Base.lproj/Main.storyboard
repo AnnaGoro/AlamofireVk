@@ -188,7 +188,7 @@
         <!--Friends-->
         <scene sceneID="AKj-Jd-ik3">
             <objects>
-                <viewController id="G8f-GE-wj7" customClass="FunctionsViewController" customModule="AlamofirePodsHome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="G8f-GE-wj7" customClass="FunctionsViewController" customModule="AlamofirePodsHome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r3h-eQ-jVg"/>
                         <viewControllerLayoutGuide type="bottom" id="J0s-q9-0OP"/>
@@ -304,6 +304,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="536"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="G8f-GE-wj7" id="TgK-fb-qIw"/>
                                     <outlet property="delegate" destination="G8f-GE-wj7" id="wrw-48-Sk2"/>
@@ -344,6 +347,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Friends" id="8JF-75-o5J"/>
                     <connections>
                         <outlet property="tableData" destination="qqh-Bt-JWV" id="YPf-RV-CG5"/>
@@ -605,7 +609,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pV4-3p-fjI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pV4-3p-fjI">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                         </subviews>
@@ -684,4 +688,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="3Jb-5v-I3l"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

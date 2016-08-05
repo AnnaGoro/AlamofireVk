@@ -28,13 +28,24 @@ class UserGetService {
     //var parameterShowField = "fields=bdate"
     
     
+    func getFriendsJSON () {
+       // var myData: [UserModel] = [UserModel]()
+        
+        Alamofire.request(.GET, mainUrlMethod + methodNameFriends, parameters: ["user_ids" : user_ids, "order" : "hints", "fields" : "photo_50, bdate, photo_200_orig", "access_token" : accessToken] ).validate()
+             .responseJSON{ response in
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
+
     
+    }
     
     func getFriends (completionHandler: (Bool, [UserModel]) -> ()) {
         
         var myData: [UserModel] = [UserModel]()
         
-        Alamofire.request(.GET, mainUrlMethod + methodNameFriends, parameters: ["user_ids" : user_ids, "order" : "hints", "fields" : "photo_50, bdate", "access_token" : accessToken] ).validate()
+        Alamofire.request(.GET, mainUrlMethod + methodNameFriends, parameters: ["user_ids" : user_ids, "order" : "hints", "fields" : "photo_50, bdate, photo_200_orig", "access_token" : accessToken] ).validate()
             .responseObject { (response: Response<UserResponseModel, NSError>) in
                 let userResponseModel = response.result.value
                 print("getUserFriends before unwrapping")
