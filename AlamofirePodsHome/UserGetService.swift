@@ -18,13 +18,38 @@ class UserGetService {
     var mainUrlMethod = Url.mainUrl
     
     var methodName = "users.get?"
+    var methodNameFriends = "friends.get??"
     var amper = "&"
     var accessToken = Url.accessTocken
     var array: [UserModel] = []
-    
+    var user_ids = Url.userId
     
     //var parameterUserId = "user_ids=210700286"
     //var parameterShowField = "fields=bdate"
+    
+    
+    
+    
+    func getFriends (completionHandler: (Bool, [UserModel]) -> ()) {
+        
+        var myData: [UserModel] = [UserModel]()
+        
+        Alamofire.request(.GET, mainUrlMethod + methodNameFriends, parameters: ["user_ids" : user_ids, "order" : "hints", "fields" : "photo_50, bdate", "access_token" : accessToken] ).validate()
+            .responseObject { (response: Response<UserResponseModel, NSError>) in
+                let userResponseModel = response.result.value
+                print("getUserFriends before unwrapping")
+                if let userResponseModel = userResponseModel {
+                    if let userModel = userResponseModel.response {
+                        myData = userModel
+                        completionHandler(true, (myData))
+                        print(myData[0].first_name)
+                    }
+                }
+        }
+    }
+    
+    
+    
     
     
     func getUserByIdJSON() {

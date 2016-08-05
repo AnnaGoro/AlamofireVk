@@ -8,7 +8,7 @@
 
 import UIKit
 import VK_ios_sdk
-class ViewController : UIViewController, UIWebViewDelegate {
+class ViewController : UIViewController, UIWebViewDelegate{
     
 @IBOutlet weak var authWebView: UIWebView!
      var webViewController = WebViewController()
@@ -18,17 +18,23 @@ class ViewController : UIViewController, UIWebViewDelegate {
         
         authWebView.delegate = self
         
-        let defaults = NSUserDefaults.standardUserDefaults()
+      //  let defaults = NSUserDefaults.standardUserDefaults()
        
         
         let myURL = NSURL(string: Authorization.REQUEST_STR);
         let myURLRequest:NSURLRequest = NSURLRequest(URL: myURL!);
     
-                print ("load request")
-      
-                authWebView.loadRequest(myURLRequest)
         
-
+        
+        if NSUserDefaults.standardUserDefaults().stringForKey("access_token") == "" {
+                authWebView.loadRequest(myURLRequest)
+                print ("load request")
+        } else {
+        
+             self.performSegueWithIdentifier("showFriends", sender: self)
+                print ("showFriends")
+        }
+        
             
         }
             

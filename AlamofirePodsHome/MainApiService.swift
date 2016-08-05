@@ -10,13 +10,15 @@ import Foundation
 
 class MainApiService {
 
-    var audioGetService = AudioGetService()
-    var videoGetService = VideoGetService()
-    var photoGetService = PhotoGetService()
+   
     var userGetService = UserGetService()
     
     
-
+    func getFriendsOfCurrentUser () {
+    
+    //userGetService.getFriends()
+    
+    }
 
 
 }

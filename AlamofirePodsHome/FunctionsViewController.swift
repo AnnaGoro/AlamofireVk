@@ -11,58 +11,56 @@ import UIKit
 import ImageLoader
 
 class FunctionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-   
     
-    @IBOutlet weak var goToHorizontalCV: UIButton!
+    
     @IBOutlet weak var tableData: UITableView!
-    
-    
-    //let array = ["1", "02", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]
-    var arrayFirstNames: [String] = [String] ()
-    
-    var arrayLastNames: [String] = [String] ()
-    
-    var arrayUrlsPhoto: [String] = [String] ()
-    
-     var arrayBdates: [String] = [String] ()
     
     var audioGetService = AudioGetService()
     var userGetService = UserGetService()
-    
     var userModelArray : [UserModel] = [UserModel] ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        audioGetService.getAudioByIdJSON()
-        
-        
-        
-        
-        userGetService.getUserById1() { (data) in
+        userGetService.getFriends() { (data) in
             var userModelArray = data.1
             for value in userModelArray {
-            
-            self.arrayFirstNames.append(value.first_name!)
-            self.arrayLastNames.append(value.last_name!)
-            var theAnswer = value.bdate ?? "no bDate"
-            self.arrayBdates.append(theAnswer)
-            self.arrayUrlsPhoto.append(value.photo_50!)
-                
-                
+                self.userModelArray.append(value)
             }
             
             self.tableData.reloadData()
             
             print ("get user by id \(data.1[0].toJSONString())   \(data.0)")
             print ("get user from array \(userModelArray[0].first_name)   \(data.0)")
-         
+            
         }
         
-       
+        
+        /*
+         
+         userGetService.getUserById1() { (data) in
+         var userModelArray = data.1
+         for value in userModelArray {
+         self.userModelArray.append(value)
+         self.arrayFirstNames.append(value.first_name!)
+         self.arrayLastNames.append(value.last_name!)
+         var theAnswer = value.bdate ?? "no bDate"
+         self.arrayBdates.append(theAnswer)
+         self.arrayUrlsPhoto.append(value.photo_50!)
+         
+         
+         }
+         
+         self.tableData.reloadData()
+         
+         print ("get friends json \(data.1[0].toJSONString())   \(data.0)")
+         print ("get friends from array \(userModelArray[0].first_name)   \(data.0)")
+         
+         }
+         
+         */
+        
     }
-    
     
     
     
@@ -71,57 +69,77 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return arrayFirstNames.count
+        return userModelArray.count
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-       let cellId = "Cell"
+        let cellId = "Cell"
+        tableView.tableFooterView = UIView()
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! CustomCellUser
         
-        cell.firstNameLabel?.text = arrayFirstNames[indexPath.row]
-        cell.lastNameLabel?.text = arrayLastNames[indexPath.row]
-        cell.bDateLabel?.text = arrayBdates[indexPath.row]
-           
-         let URL = arrayUrlsPhoto[indexPath.row]
-         let placeholder = UIImage(named: "img_nature")!
-         cell.thumbNailImageView.load(URL, placeholder: placeholder) { URL, image, error, cacheType in
-         print("URL \(URL)")
-         print("error \(error)")
-         print("image \(image?.size), render-image \(cell.thumbNailImageView.image?.size)")
-         print("cacheType \(cacheType.hashValue)")
-         if cacheType == CacheType.None {
-         let transition = CATransition()
-         transition.duration = 0.5
-         transition.type = kCATransitionFade
-         cell.thumbNailImageView.layer.addAnimation(transition, forKey: nil)
-         cell.thumbNailImageView.image = image
+        cell.firstNameLabel?.text = userModelArray[indexPath.row].first_name
+        cell.lastNameLabel?.text = userModelArray[indexPath.row].last_name
         
-            
-         }
-            
-            cell.thumbNailImageView.layer.cornerRadius = 30.0
-            cell.thumbNailImageView.clipsToBounds = true
-         }
-         
- 
-        
-        
-        
-        
-        
-        
-        
+        cell.bDateLabel?.text = userModelArray[indexPath.row].bdate ?? "no bDate"
        
+        let URL = self.userModelArray[indexPath.row].photo_50!
+        let placeholder = UIImage(named: "img_nature")!
+        cell.thumbNailImageView.load(URL, placeholder: placeholder) { URL, image, error, cacheType in
+            print("URL \(URL)")
+            print("error \(error)")
+            print("image \(image?.size), render-image \(cell.thumbNailImageView.image?.size)")
+            print("cacheType \(cacheType.hashValue)")
+            if cacheType == CacheType.None {
+                let transition = CATransition()
+                transition.duration = 0.5
+                transition.type = kCATransitionFade
+                cell.thumbNailImageView.layer.addAnimation(transition, forKey: nil)
+                cell.thumbNailImageView.image = image
+                
+                
+            }
+            
+            cell.thumbNailImageView.layer.cornerRadius = 35.0
+            cell.thumbNailImageView.clipsToBounds = true
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         return cell
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDetail" {
+            if let indexPath = tableData.indexPathForSelectedRow {
+            
+            let destinationController = segue.destinationViewController as! DetailViewController
+            
+                destinationController.firstName = userModelArray[indexPath.row].first_name!
+                destinationController.lastName = userModelArray[indexPath.row].last_name!
+                destinationController.bDate = userModelArray[indexPath.row].bdate!
+        }
     }
     
     
     
     
-
-
+    
+    
+    
+    }
+    
+    
+    
 }

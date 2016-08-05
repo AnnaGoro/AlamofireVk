@@ -10,10 +10,18 @@ import UIKit
 
 class CustomCellUser: UITableViewCell {
     
+    
     @IBOutlet weak var thumbNailImageView: UIImageView!
-    @IBOutlet weak var firstNameLabel: UILabel!
-    @IBOutlet weak var lastNameLabel: UILabel!
+    
     @IBOutlet weak var bDateLabel: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    
+    @IBOutlet weak var firstNameLabel: UILabel!
+    
+    //@IBOutlet weak var thumbNailImageView: //UIImageView!
+   // @IBOutlet weak var firstNameLabel: UILabel!
+   // @IBOutlet weak var lastNameLabel: UILabel!
+   // @IBOutlet weak var bDateLabel: UILabel!
     
 
     
