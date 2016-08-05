@@ -8,6 +8,8 @@
 
 
 import UIKit
+import ImageLoader
+
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var bDateLabel: UILabel!
@@ -21,14 +23,18 @@ class DetailViewController: UIViewController {
     var bDate = ""
     var firstName = ""
     var lastName = ""
+    var index = 0
+    var url = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = imageUser
+        //imageView.image = imageUser
         bDateLabel.text = bDate
         lastNameLabel.text = lastName
         firstNameLabel.text = firstName
-        
+        imageView.load(url)
+        imageView.layer.cornerRadius = 35.0
+        imageView.clipsToBounds = true
     }
     
     

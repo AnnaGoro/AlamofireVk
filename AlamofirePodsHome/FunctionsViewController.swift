@@ -35,31 +35,7 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
             
         }
         
-        
-        /*
-         
-         userGetService.getUserById1() { (data) in
-         var userModelArray = data.1
-         for value in userModelArray {
-         self.userModelArray.append(value)
-         self.arrayFirstNames.append(value.first_name!)
-         self.arrayLastNames.append(value.last_name!)
-         var theAnswer = value.bdate ?? "no bDate"
-         self.arrayBdates.append(theAnswer)
-         self.arrayUrlsPhoto.append(value.photo_50!)
-         
-         
-         }
-         
-         self.tableData.reloadData()
-         
-         print ("get friends json \(data.1[0].toJSONString())   \(data.0)")
-         print ("get friends from array \(userModelArray[0].first_name)   \(data.0)")
-         
-         }
-         
-         */
-        
+     
     }
     
     
@@ -119,12 +95,16 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
             if let indexPath = tableData.indexPathForSelectedRow {
             
             let destinationController = segue.destinationViewController as! DetailViewController
-            
+           
                 destinationController.firstName = userModelArray[indexPath.row].first_name!
                 destinationController.lastName = userModelArray[indexPath.row].last_name!
                 destinationController.bDate = userModelArray[indexPath.row].bdate ?? "no bDate"
-                destinationController.imageUser = sendImage
-        }
+                
+                destinationController.url = userModelArray[indexPath.row].photo_50!
+                
+                
+                
+            }
     }
     
     
