@@ -10,13 +10,14 @@ import UIKit
 import VK_ios_sdk
 class ViewController : UIViewController, UIWebViewDelegate{
     
-@IBOutlet weak var authWebView: UIWebView!
-     var webViewController = WebViewController()
+   // @IBOutlet weak var okBtn: UIButton!
+    @IBOutlet weak var authWebView: UIWebView!
+    var webViewController = WebViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        authWebView.delegate = self
+         //okBtn.enabled = false
+         authWebView.delegate = self
         
       //  let defaults = NSUserDefaults.standardUserDefaults()
        
@@ -29,10 +30,15 @@ class ViewController : UIViewController, UIWebViewDelegate{
         if NSUserDefaults.standardUserDefaults().stringForKey("access_token") == "" {
                 authWebView.loadRequest(myURLRequest)
                 print ("load request")
+               // okBtn.enabled = true
         } else {
         
-             self.performSegueWithIdentifier("showFriends", sender: self)
+             self.shouldPerformSegueWithIdentifier("showFriends", sender: self)
                 print ("showFriends")
+               // okBtn.enabled = true
+            
+            
+            
         }
         
             
@@ -43,7 +49,8 @@ class ViewController : UIViewController, UIWebViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    
+ 
+   
     func webViewDidFinishLoad(authWebView: UIWebView) {
         
         print ("webViewDidFinishLoad")

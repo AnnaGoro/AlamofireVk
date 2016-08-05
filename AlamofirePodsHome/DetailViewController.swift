@@ -17,14 +17,14 @@ class DetailViewController: UIViewController {
     
     
     
-    var imageUser = ""
+    var imageUser: UIImage = UIImage(named: "img_nature")!
     var bDate = ""
     var firstName = ""
     var lastName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(named: imageUser)
+        imageView.image = imageUser
         bDateLabel.text = bDate
         lastNameLabel.text = lastName
         firstNameLabel.text = firstName

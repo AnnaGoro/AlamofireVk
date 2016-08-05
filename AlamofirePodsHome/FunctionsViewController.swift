@@ -14,7 +14,7 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
     
     
     @IBOutlet weak var tableData: UITableView!
-    
+    var sendImage: UIImage = UIImage()
     var audioGetService = AudioGetService()
     var userGetService = UserGetService()
     var userModelArray : [UserModel] = [UserModel] ()
@@ -100,6 +100,8 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
                 cell.thumbNailImageView.layer.addAnimation(transition, forKey: nil)
                 cell.thumbNailImageView.image = image
                 
+                self.sendImage = image!
+                
                 
             }
             
@@ -107,15 +109,7 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
             cell.thumbNailImageView.clipsToBounds = true
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
+       
         return cell
     }
     
@@ -128,7 +122,8 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
             
                 destinationController.firstName = userModelArray[indexPath.row].first_name!
                 destinationController.lastName = userModelArray[indexPath.row].last_name!
-                destinationController.bDate = userModelArray[indexPath.row].bdate!
+                destinationController.bDate = userModelArray[indexPath.row].bdate ?? "no bDate"
+                destinationController.imageUser = sendImage
         }
     }
     

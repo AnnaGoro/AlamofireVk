@@ -33,7 +33,7 @@
                                     <rect key="frame" x="120" y="550" width="160" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="zB4-MX-7JV" kind="show" id="sdY-HM-KcZ"/>
+                                    <segue destination="zB4-MX-7JV" kind="show" id="3Jb-5v-I3l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,7 +70,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" rowHeight="80" id="FNL-Bo-NpR" customClass="CustomCellUser" customModule="AlamofirePodsHome" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FNL-Bo-NpR" id="FQ5-h9-fRg">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
@@ -324,10 +324,10 @@
                                 <exclude reference="qqh-Bt-JWV"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="0Xx-ir-Wbb"/>
                                 <exclude reference="1qR-Wz-7LQ"/>
                                 <exclude reference="S07-Ud-6KA"/>
                                 <exclude reference="lxS-wx-htN"/>
-                                <exclude reference="0Xx-ir-Wbb"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -335,12 +335,12 @@
                                 <include reference="qqh-Bt-JWV"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="0Xx-ir-Wbb"/>
+                                <exclude reference="K6g-sf-WRz"/>
                                 <include reference="1qR-Wz-7LQ"/>
                                 <exclude reference="3rJ-0s-CP3"/>
                                 <include reference="S07-Ud-6KA"/>
                                 <include reference="lxS-wx-htN"/>
-                                <include reference="0Xx-ir-Wbb"/>
-                                <exclude reference="K6g-sf-WRz"/>
                             </mask>
                         </variation>
                     </view>
@@ -682,6 +682,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Uw4-Mf-cOa"/>
+        <segue reference="3Jb-5v-I3l"/>
     </inferredMetricsTieBreakers>
 </document>
