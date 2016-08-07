@@ -63,7 +63,7 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
         
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! PhotoCell
-        print ("func collection view")
+     
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         
         let URL = photosModelArray[indexPath.row].src_small!

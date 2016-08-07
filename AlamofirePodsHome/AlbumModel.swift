@@ -35,17 +35,17 @@ class AlbumModel:Mappable {
     }
     
     func mapping(map: Map) {
-        aid <- (map["aid"])
-        owner_id <- (map["owner_id"])
+        aid <- map["aid"]
+        owner_id <- map["owner_id"]
         title <- map["title"]
-        thumb_id <- (map["thumb_id"])
+        thumb_id <- map["thumb_id"]
         thumb_src <- map["thumb_src"]
-        description <- (map["description"])
-        created <- (map["created"] )
-        updated <- (map["updated"])
+        description <- map["description"]
+        created <- map["created"]
+        updated <- map["updated"]
         size <- map["size"]
-        thumb_is_last <- (map["thumb_is_last"] )
-        privacy_view <- (map["privacy_view"] )
-        privacy_comment <- (map["privacy_comment"] )
+        thumb_is_last <- map["thumb_is_last"]
+        privacy_view <- map["privacy_view"]
+        privacy_comment <- map["privacy_comment"]
 }
 }

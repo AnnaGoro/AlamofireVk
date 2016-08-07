@@ -11,7 +11,7 @@ import UIKit
 import ImageLoader
 
 
-class PhotoAlbumsCollectionViewController : UICollectionViewController  {
+class PhotoAlbumsCollectionViewController : UIViewController  {
     @IBOutlet var collectionData: UICollectionView!
     
     //@IBOutlet weak var collectionData: UICollectionView!
@@ -26,7 +26,7 @@ class PhotoAlbumsCollectionViewController : UICollectionViewController  {
         super.viewDidLoad()
         //var s = owner_id as! String
         
-        photoGetService.getAlbumsJSON(owner_id) 
+     //   photoGetService.getAlbumsJSON(owner_id)
         photoGetService.getAlbums(owner_id) { (data) in
             var photoModelArr = data.1
             for value in photoModelArr {
@@ -52,13 +52,13 @@ class PhotoAlbumsCollectionViewController : UICollectionViewController  {
     // MARK: - UICollectionViewDataSource protocol
     
     // tell the collection view how many cells to make
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
          print ("func collection view self.albumsModelArray.count")
         return self.albumsModelArray.count
     }
     
     // make a cell for each cell index path
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! PhotoAlbumsCell
@@ -114,12 +114,15 @@ class PhotoAlbumsCollectionViewController : UICollectionViewController  {
     
     
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         // handle tap events
         
-        owner_id = String(albumsModelArray[indexPath.item].owner_id)
-        album_id = String(albumsModelArray[indexPath.item].aid)
+        self.owner_id = String(albumsModelArray[indexPath.item].owner_id)
+        self.album_id = String(albumsModelArray[indexPath.item].aid)
         print("You selected cell #\(indexPath.item)!")
+        self.performSegueWithIdentifier("showPhotos", sender:nil)
+
+
     }
 
 }

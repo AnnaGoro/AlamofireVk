@@ -18,7 +18,7 @@ class AlamofirePodsHomeTests: XCTestCase {
     var userGetService = UserGetService()
     var videoGetService = VideoGetService()
     
-    var token = "http://api.vk.com/blank.html#access_token=524c1f441a0f1e0325e1a34220f3929035add91616fed4eb0422c364bc59138c3f67a2e792115aad4257d&expires_in=0&user_id=29338816"
+    
     
     override func setUp() {
         super.setUp()
@@ -33,12 +33,16 @@ class AlamofirePodsHomeTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-       
+        print ("filterSecond")
+        filterSecond ()
+        print ("filterThird")
+        filterThird ()
+        print ("dictMapFifth")
+        dictMapFifth ()
+        print ("reduceSix")
+        reduceSix ()
 
-        //userGetService.getUserById1()
-        //audioGetService.getPopularAudioCount("only_eng=1", count: "count=10");
-        //photoGetService.getPhotoById1()
-        //userGetService.getUserByIdJSON()
+  
     
         }
     func testPerformanceExample() {
@@ -49,4 +53,50 @@ class AlamofirePodsHomeTests: XCTestCase {
     
     
         }
+    
+    func filterSecond () {
+        var arraySecond : [String] = ["one", "two", "three", "four", "five"]
+        let filtered = arraySecond.filter { $0.containsString("t") }
+        print (filtered)
+        
+    }
+    
+    
+    func filterThird () {
+        
+        var arrayThird: [(String, Int)] = [("Alex",24), ("Bob",45), ("Mike", 12)]
+        print (arrayThird.filter({ $0.1 < 25 }))
+        
+    }
+    
+    
+    func reduceSix () {
+        var arrayString = ["one", "two", "three", "four", "five"]
+        let result = arrayString.reduce("", combine: {
+            if $0.characters.count == 0 {
+                return "\($1)"
+                
+            } else {
+                
+                return "\($0) - \($1)"
+            }
+            
+            
+        })
+        
+        print (result)
+        
+    }
+    
+    func dictMapFifth () {
+        
+        var dict = ["Alex":24, "Bob":45, "Mike":12]
+        var res = dict.map{ $0.1 + 1 }
+        print (res)
+        
+        
+    }
+
+    
+    
 }
