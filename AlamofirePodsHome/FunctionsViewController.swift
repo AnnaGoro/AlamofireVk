@@ -12,6 +12,7 @@ import ImageLoader
 
 class FunctionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var photoGetService = PhotoGetService()
     
     @IBOutlet weak var tableData: UITableView!
     var sendImage: UIImage = UIImage()
@@ -21,7 +22,9 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userGetService.getFriendsJSON ()
+        //userGetService.getFriendsJSON ()
+       // photoGetService.getAlbumsJSON ()
+        
         
         userGetService.getFriends() { (data) in
             var userModelArray = data.1

@@ -35,10 +35,10 @@ class AlamofirePodsHomeTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
        
 
-        userGetService.getUserById1()
-        audioGetService.getPopularAudioCount("only_eng=1", count: "count=10");
-        photoGetService.getPhotoById1()
-        userGetService.getUserByIdJSON()
+        //userGetService.getUserById1()
+        //audioGetService.getPopularAudioCount("only_eng=1", count: "count=10");
+        //photoGetService.getPhotoById1()
+        //userGetService.getUserByIdJSON()
     
         }
     func testPerformanceExample() {

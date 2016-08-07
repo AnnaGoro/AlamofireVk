@@ -17,9 +17,10 @@ class  PhotoModel:Mappable {
     var user_id : Int?
     var text : String?
     var date : NSDate? //unix time
+    var src_small : String?
+    var src_xbig: String?
     
-    
-    var transformStringToInt = TransformOf<Int, String>(fromJSON: { Int($0!) }, toJSON: { $0.map { String($0) } })
+   
     
     
     required init?(_ map: Map){
@@ -27,35 +28,19 @@ class  PhotoModel:Mappable {
     }
     
     func mapping(map: Map) {
-        id <- (map["id"], transformStringToInt )
-        album_id <- (map["album_id"], transformStringToInt )
-        owner_id <- (map["owner_id"], transformStringToInt )
-        user_id <- (map["user_id"], transformStringToInt )
+        id <- map["id"]
+        album_id <- map["album_id"]
+        owner_id <- map["owner_id"]
+        user_id <- map["user_id"]
         text <- map["text"]
         date <- (map["date"], DateTransform())
+        src_small <- map["src_small"]
+        src_xbig <- map["src_xbig"]
+        
     }
 
     
     
-    // TODO: parameter photo_sizes=1 with urls  https://new.vk.com/dev/photo
-    
-    /*
-    init (id : Int,
-    album_id : Int,
-    owner_id : Int,
-    user_id : Int?,
-    text : String?,
-    date : IntMax) {
-        
-        
-        self.id = id
-        self.album_id = album_id
-        self.owner_id = owner_id
-        self.user_id = user_id
-        self.text = text
-        self.date = date
-        
-    }
-*/
+
 
 }

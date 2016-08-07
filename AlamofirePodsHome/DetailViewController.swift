@@ -17,6 +17,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBAction func photoAlbBtn(sender: AnyObject) {
+        
+       // go()
+        
+        
+    }
     
     
     var imageUser: UIImage = UIImage(named: "img_nature")!
@@ -33,17 +39,36 @@ class DetailViewController: UIViewController {
         lastNameLabel.text = lastName
         firstNameLabel.text = firstName
         imageView.load(url)
-        imageView.layer.cornerRadius = 100.0
-        imageView.clipsToBounds = true
+        //imageView.layer.cornerRadius = 100.0
+       // imageView.clipsToBounds = true
+        //TODO add buttons with segues to other methods and send data (user_id)!!!!!
+        
         
         print (userFriendId)
         
     }
+    //
+    //func go() {
+   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showPhotoAlbums" {
+           
+                
+                let destinationController = segue.destinationViewController as! PhotoAlbumsCollectionViewController
+                
+                destinationController.owner_id = String(userFriendId)
+            
+      //
+      //  }
+        
+        
+        
+        
+        
+        
+        
+    }
     
-    
-    
-    
-    
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
