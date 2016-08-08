@@ -61,7 +61,7 @@ class PhotoGetService {
                 if let albumResponseModel = albumResponseModel {
                     if let albumModel = albumResponseModel.response {
                         myData = albumModel
-                        completionHandler(true, (myData))
+                        completionHandler(true, myData)
                         print(" getAlbums PhotoGetService \(myData[0].owner_id)")
                     }
                 }

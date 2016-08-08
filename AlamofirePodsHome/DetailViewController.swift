@@ -55,7 +55,7 @@ class DetailViewController: UIViewController {
                 
                 let destinationController = segue.destinationViewController as! PhotoAlbumsCollectionViewController
                 
-                destinationController.owner_id = String(userFriendId)
+                destinationController.owner_id = userFriendId
             
       //
       //  }

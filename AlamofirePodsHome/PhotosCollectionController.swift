@@ -18,8 +18,8 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
     //@IBOutlet weak var collectionData: UICollectionView!
     
     var photoGetService = PhotoGetService()
-    var owner_id =  String()
-    var album_id = String()
+    var owner_id : Int = 0
+    var album_id : Int = 0
     var photosModelArray : [PhotoModel] = [PhotoModel] ()
     var url = String()
     
@@ -27,8 +27,8 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
         super.viewDidLoad()
         //var s = owner_id as! String
         print ("PhotosCollectionController")
-        photoGetService.getPhotosJSON (owner_id, album_id: album_id)
-        photoGetService.getPhotos(owner_id, album_id: album_id) { (data) in
+        photoGetService.getPhotosJSON (String(owner_id), album_id: String (album_id))
+        photoGetService.getPhotos(String(owner_id), album_id: String (album_id)) { (data) in
             var photoModelArr = data.1
             for value in photoModelArr {
                 print (" get photos from \(value.owner_id)")

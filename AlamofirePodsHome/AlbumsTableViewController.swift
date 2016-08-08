@@ -1,30 +1,28 @@
 //
-//  AudiosViewController.swift
+//  AlbumsTableViewController.swift
 //  AlamofirePodsHome
 //
-//  Created by Ann Goro on 8/3/16.
+//  Created by Ann Goro on 8/7/16.
 //  Copyright © 2016 Ann Goro. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class AudiosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AlbumsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
-
-  
     
     var arrayAudiosTitles: [String] = [String] ()
     
     var audioGetService = AudioGetService()
-   
+    
     
     var audioModelArray : [AudioModel] = [AudioModel] ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        audioGetService.getPopularAudioCount() { (data) in
+       /*
+        audioGetService.getAlbums(owner_id)) { (data) in
             print("getPopularAudioCount")
             var audioModelArray = data.1
             for value in audioModelArray {
@@ -34,12 +32,12 @@ class AudiosViewController: UIViewController, UITableViewDataSource, UITableView
                 
             }
             
-            //self.tableData.reloadData()
+            self.tableData.reloadData()
             
             print ("get audio by id \(data.1[0].toJSONString())   \(data.0)")
             
         }
-        
+        */
         
     }
     
@@ -58,11 +56,11 @@ class AudiosViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellId = "cellAudios"
+        let cellId = "cellAudioAlbums"
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! CustomCellAudio
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
         
-        cell.audioLabel!.text = arrayAudiosTitles[indexPath.row]
+        //cell.label.text = arrayAudiosTitles[indexPath.row]
         
         return cell
     }
@@ -71,5 +69,10 @@ class AudiosViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     
-    
+
+
+
+
+
 }
+

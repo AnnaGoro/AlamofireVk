@@ -167,40 +167,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qld-Kv-lgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2569.5" y="158"/>
-        </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="H42-Oi-14i">
-            <objects>
-                <collectionViewController id="TUe-Gg-rCS" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kv1-vk-df6">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nWN-kH-084">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kxn-dB-goK">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="TUe-Gg-rCS" id="RZG-fu-B88"/>
-                            <outlet property="delegate" destination="TUe-Gg-rCS" id="VuL-ex-Iv2"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UIa-Tn-mvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3316.5" y="149"/>
+            <point key="canvasLocation" x="2191.5" y="882"/>
         </scene>
         <!--Friends-->
         <scene sceneID="mal-7Z-EyF">
@@ -458,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHc-lc-gNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="955"/>
+            <point key="canvasLocation" x="4030.5" y="284"/>
         </scene>
         <!--UICollectionView-->
         <scene sceneID="1yB-fr-fHm">
@@ -596,6 +563,30 @@
             </objects>
             <point key="canvasLocation" x="1879.5" y="158"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="ASu-wf-aWe">
+            <objects>
+                <tableViewController id="wt6-IR-Wx8" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qp0-kv-7el">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gbh-OQ-WHA">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gbh-OQ-WHA" id="TxA-yC-J5n">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISQ-rV-Agk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2761.5" y="167"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="bg7-gi-ogk">
             <objects>
@@ -642,6 +633,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pV4-3p-fjI">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ps-2U-Ru4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="PhotoAlbums"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="143" y="550" width="115" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="photoAlbBtn:" destination="c68-dI-lUj" eventType="touchUpInside" id="nH1-jf-6q9"/>
+                                    <segue destination="L5E-4A-bqy" kind="show" identifier="showPhotoAlbums" id="2Rm-ty-AKb"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdT-cn-XML">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Dialogs"/>
@@ -655,17 +657,6 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="550" width="55" height="30"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ps-2U-Ru4">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="PhotoAlbums"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="143" y="550" width="115" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="photoAlbBtn:" destination="c68-dI-lUj" eventType="touchUpInside" id="nH1-jf-6q9"/>
-                                    <segue destination="L5E-4A-bqy" kind="show" identifier="showPhotoAlbums" id="2Rm-ty-AKb"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -689,9 +680,9 @@
                                 <exclude reference="pdQ-cW-CFO"/>
                                 <exclude reference="RIn-Pq-F9o"/>
                                 <exclude reference="pV4-3p-fjI"/>
+                                <exclude reference="0ps-2U-Ru4"/>
                                 <exclude reference="bdT-cn-XML"/>
                                 <exclude reference="U5W-YF-AJ8"/>
-                                <exclude reference="0ps-2U-Ru4"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="i5p-FJ-b4r"/>
@@ -714,9 +705,9 @@
                                 <include reference="pdQ-cW-CFO"/>
                                 <include reference="RIn-Pq-F9o"/>
                                 <include reference="pV4-3p-fjI"/>
+                                <include reference="0ps-2U-Ru4"/>
                                 <include reference="bdT-cn-XML"/>
                                 <include reference="U5W-YF-AJ8"/>
-                                <include reference="0ps-2U-Ru4"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="i5p-FJ-b4r"/>
@@ -750,6 +741,7 @@
             <objects>
                 <collectionViewController id="L5E-4A-bqy" customClass="PhotoAlbumsCollectionViewController" customModule="AlamofirePodsHome" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="collectionData" dataMode="prototypes" id="NtI-OB-NTV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y5j-CA-1Nu">
@@ -760,7 +752,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="photoAlbumsCell" id="r4N-1W-jNK" customClass="PhotoAlbumsCell" customModule="AlamofirePodsHome" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="140" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="140" height="138"/>
@@ -769,7 +761,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="album name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pd5-aI-Y9q">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
                                                 <rect key="frame" x="2" y="97" width="146" height="21"/>
@@ -822,6 +814,7 @@
             <objects>
                 <collectionViewController id="kDz-Cf-7PU" customClass="PhotosCollectionController" customModule="AlamofirePodsHome" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="o35-3V-bbW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cIx-GA-UpO">
                             <size key="itemSize" width="130" height="125"/>
@@ -831,7 +824,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="2x0-NZ-3Sb" customClass="PhotoCell" customModule="AlamofirePodsHome" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="130" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="130" height="125"/>
@@ -884,6 +877,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ux6-BR-Miu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HCg-B3-AeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0d-lI-C1t">

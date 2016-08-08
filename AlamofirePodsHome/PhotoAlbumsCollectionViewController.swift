@@ -17,8 +17,10 @@ class PhotoAlbumsCollectionViewController : UIViewController  {
     //@IBOutlet weak var collectionData: UICollectionView!
     
     var photoGetService = PhotoGetService()
-    var owner_id = String()
-    var album_id = String()
+    var owner_id : Int = 0
+    //var owner_id1  = 0
+   // var album_id1 = 0
+    var album_id: Int = 0
     var albumsModelArray : [AlbumModel] = [AlbumModel] ()
     
     
@@ -26,14 +28,14 @@ class PhotoAlbumsCollectionViewController : UIViewController  {
         super.viewDidLoad()
         //var s = owner_id as! String
         
-     //   photoGetService.getAlbumsJSON(owner_id)
-        photoGetService.getAlbums(owner_id) { (data) in
+        photoGetService.getAlbumsJSON(String(owner_id))
+        photoGetService.getAlbums(String(owner_id)) { (data) in
             var photoModelArr = data.1
             for value in photoModelArr {
                 //print (value.aid)
                 self.albumsModelArray.append(value)
                 print ("************\(value.aid)*********")
-                
+                print ("owner_id  \(value.owner_id)  owner_id")
             }
             
             self.collectionData.reloadData()
@@ -93,16 +95,19 @@ class PhotoAlbumsCollectionViewController : UIViewController  {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPhotos" {
-            
+            if let cell = sender as? PhotoAlbumsCell {
+            var  indexPath = collectionData.indexPathForCell(cell)
             
             let destinationController = segue.destinationViewController as! PhotosCollectionController
             
-            
+           //owner_id1 = albumsModelArray[indexPath!.row].owner_id!
+           //album_id1 = albumsModelArray[indexPath!.row].aid!
+
             destinationController.owner_id = owner_id
             
-            destinationController.album_id = album_id
+            destinationController.album_id = albumsModelArray[indexPath!.row].aid!
 
-            
+            }
             
         }
         
@@ -117,10 +122,10 @@ class PhotoAlbumsCollectionViewController : UIViewController  {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         // handle tap events
         
-        self.owner_id = String(albumsModelArray[indexPath.item].owner_id)
-        self.album_id = String(albumsModelArray[indexPath.item].aid)
+        //owner_id1 = owner_id
+       // album_id1 = albumsModelArray[indexPath.row].aid!
         print("You selected cell #\(indexPath.item)!")
-        self.performSegueWithIdentifier("showPhotos", sender:nil)
+       // self.performSegueWithIdentifier("showPhotos", sender:nil)
 
 
     }
