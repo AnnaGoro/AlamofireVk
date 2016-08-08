@@ -30,7 +30,7 @@ class PhotoAlbumsCollectionViewController : UIViewController  {
         
         photoGetService.getAlbumsJSON(String(owner_id))
         photoGetService.getAlbums(String(owner_id)) { (data) in
-            var photoModelArr = data.1
+            let photoModelArr = data.1
             for value in photoModelArr {
                 //print (value.aid)
                 self.albumsModelArray.append(value)
@@ -96,7 +96,7 @@ class PhotoAlbumsCollectionViewController : UIViewController  {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPhotos" {
             if let cell = sender as? PhotoAlbumsCell {
-            var  indexPath = collectionData.indexPathForCell(cell)
+            let  indexPath = collectionData.indexPathForCell(cell)
             
             let destinationController = segue.destinationViewController as! PhotosCollectionController
             

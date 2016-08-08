@@ -22,7 +22,7 @@ class VideoGetService {
     var methodNameGetSearchVideos = " video.search?"
    
     var amper = "&"
-    var accessToken = Url.accessTocken + ""
+    var accessToken = Url.accessTocken
     
     func getVideoById (owner_id : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNameVideoGet + owner_id + amper +  accessToken) )

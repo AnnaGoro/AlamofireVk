@@ -30,9 +30,10 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
             var userModelArray = data.1
             for value in userModelArray {
                 self.userModelArray.append(value)
+                
             }
-            
             self.tableData.reloadData()
+           
             
             print ("get user by id \(data.1[0].toJSONString())   \(data.0)")
             print ("get user from array \(userModelArray[0].first_name)   \(data.0)")
@@ -106,7 +107,7 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
                 destinationController.bDate = userModelArray[indexPath.row].bdate ?? "no bDate"
                 destinationController.url = userModelArray[indexPath.row].photo_200_orig!
                 destinationController.userFriendId = userModelArray[indexPath.row].user_id!
-                 var s = userModelArray[indexPath.row].user_id
+                 let s = userModelArray[indexPath.row].user_id
                 print ("********* id \(s)")
                
             }

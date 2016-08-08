@@ -26,7 +26,7 @@ class AudiosViewController: UIViewController, UITableViewDataSource, UITableView
         
         audioGetService.getPopularAudioCount() { (data) in
             print("getPopularAudioCount")
-            var audioModelArray = data.1
+            let audioModelArray = data.1
             for value in audioModelArray {
                 
                 self.arrayAudiosTitles.append(value.title!)

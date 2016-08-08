@@ -28,7 +28,7 @@ class AudioGetService {
     
     func getAudioByIdJSON() {
         
-        let url = "https://api.vk.com/method/users.get?"
+        _ = "https://api.vk.com/method/users.get?"
         
         
         Alamofire.request(.GET,  (mainUrlMethod + methodNameAudioGetPopular + only_eng + amper + accessToken) ).validate()

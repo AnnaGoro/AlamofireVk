@@ -34,7 +34,7 @@ class ViewControllerCollection: UIViewController, UICollectionViewDataSource, UI
                 
                 self.arrayFirstNames.append(value.first_name!)
                 self.arrayLastNames.append(value.last_name!)
-                var theAnswer = value.bdate ?? "no bDate"
+                let theAnswer = value.bdate ?? "no bDate"
                 self.arrayBdates.append(theAnswer)
                 self.arrayUrlsPhoto.append(value.photo_50!)
                 

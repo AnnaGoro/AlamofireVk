@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AlbumsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class AlbumsAudioTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     
     var arrayAudiosTitles: [String] = [String] ()

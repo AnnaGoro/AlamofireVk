@@ -55,7 +55,7 @@ class AlamofirePodsHomeTests: XCTestCase {
         }
     
     func filterSecond () {
-        var arraySecond : [String] = ["one", "two", "three", "four", "five"]
+        let arraySecond : [String] = ["one", "two", "three", "four", "five"]
         let filtered = arraySecond.filter { $0.containsString("t") }
         print (filtered)
         
@@ -64,14 +64,14 @@ class AlamofirePodsHomeTests: XCTestCase {
     
     func filterThird () {
         
-        var arrayThird: [(String, Int)] = [("Alex",24), ("Bob",45), ("Mike", 12)]
+        let arrayThird: [(String, Int)] = [("Alex",24), ("Bob",45), ("Mike", 12)]
         print (arrayThird.filter({ $0.1 < 25 }))
         
     }
     
     
     func reduceSix () {
-        var arrayString = ["one", "two", "three", "four", "five"]
+        let arrayString = ["one", "two", "three", "four", "five"]
         let result = arrayString.reduce("", combine: {
             if $0.characters.count == 0 {
                 return "\($1)"
@@ -90,8 +90,8 @@ class AlamofirePodsHomeTests: XCTestCase {
     
     func dictMapFifth () {
         
-        var dict = ["Alex":24, "Bob":45, "Mike":12]
-        var res = dict.map{ $0.1 + 1 }
+        let dict = ["Alex":24, "Bob":45, "Mike":12]
+        let res = dict.map{ $0.1 + 1 }
         print (res)
         
         

@@ -29,7 +29,7 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
         print ("PhotosCollectionController")
         photoGetService.getPhotosJSON (String(owner_id), album_id: String (album_id))
         photoGetService.getPhotos(String(owner_id), album_id: String (album_id)) { (data) in
-            var photoModelArr = data.1
+            let photoModelArr = data.1
             for value in photoModelArr {
                 print (" get photos from \(value.owner_id)")
                 self.photosModelArray.append(value)
@@ -66,7 +66,7 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
      
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         
-        let URL = photosModelArray[indexPath.row].src_small!
+        let URL = photosModelArray[indexPath.row].src_xbig!
         let placeholder = UIImage(named: "img_nature")!
         cell.photoImageView.load(URL, placeholder: placeholder) { URL, image, error, cacheType in
             print("URL \(URL)")

@@ -83,5 +83,83 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlamofirePodsHome/urlsEn.swift"
+            timestampString = "492385398.763472"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "Url"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_11795BB9610271350BCBD4EDF3378C9B_func0"
+                  moduleName = "AlamofirePodsHome"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anngoro/Desktop/lessons/AlamofirePodsHome/AlamofirePodsHome/urlsEn.swift"
+                  timestampString = "492385399.908588"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlamofirePodsHome.Url.accessTocken.unsafeMutableAddressor : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "AlamofirePodsHome"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anngoro/Desktop/lessons/AlamofirePodsHome/AlamofirePodsHome/urlsEn.swift"
+                  timestampString = "492385399.921727"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static AlamofirePodsHome.Url.accessTocken.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "AlamofirePodsHome"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anngoro/Desktop/lessons/AlamofirePodsHome/AlamofirePodsHome/urlsEn.swift"
+                  timestampString = "492385399.921946"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "71">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static AlamofirePodsHome.Url.accessTocken.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "AlamofirePodsHome"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anngoro/Desktop/lessons/AlamofirePodsHome/AlamofirePodsHome/urlsEn.swift"
+                  timestampString = "492385399.92206"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "165">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

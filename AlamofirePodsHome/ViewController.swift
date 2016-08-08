@@ -26,7 +26,7 @@ class ViewController : UIViewController, UIWebViewDelegate{
     
         
         
-        if NSUserDefaults.standardUserDefaults().stringForKey("access_token") == "" {
+        if NSUserDefaults.standardUserDefaults().stringForKey("access_token") == nil {
                 authWebView.loadRequest(myURLRequest)
                 print ("load request")
                // okBtn.enabled = true
@@ -80,12 +80,20 @@ class ViewController : UIViewController, UIWebViewDelegate{
             
             print(NSUserDefaults.standardUserDefaults().stringForKey("expires_in"))
             
+            goToFriends()
+
            
                    }
     }
+    
+    
+    
+    
+    
     func goToFriends() {
-        
-        performSegueWithIdentifier("showFriends", sender: authWebView)
+        //et vc = FunctionsViewController()
+       // self.presentViewController(vc, animated: true, completion: nil)
+        self.shouldPerformSegueWithIdentifier("showFriends", sender: self)
     }
     
     
