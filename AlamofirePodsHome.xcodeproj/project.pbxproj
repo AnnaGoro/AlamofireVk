@@ -21,6 +21,9 @@
 		D7060D351D52BC3B006AE80C /* CustomCellAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7060D341D52BC3B006AE80C /* CustomCellAudio.swift */; };
 		D70B1CBF1D514D7E0068E1E7 /* FunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B1CBE1D514D7D0068E1E7 /* FunctionsViewController.swift */; };
 		D70B1CC11D520B1C0068E1E7 /* CustomCellUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B1CC01D520B1C0068E1E7 /* CustomCellUser.swift */; };
+		D7100A801D5A7A4300EDB033 /* AudioAlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7100A7F1D5A7A4300EDB033 /* AudioAlbumModel.swift */; };
+		D7100A821D5A7A6400EDB033 /* AudioAlbumResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7100A811D5A7A6400EDB033 /* AudioAlbumResponseModel.swift */; };
+		D7100A841D5A91AC00EDB033 /* CustomCellAudioList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7100A831D5A91AC00EDB033 /* CustomCellAudioList.swift */; };
 		D71F0EE81D4CEE50004A46B7 /* AudioGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EE71D4CEE50004A46B7 /* AudioGetService.swift */; };
 		D71F0EEA1D4CEEC2004A46B7 /* VideoGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EE91D4CEEC2004A46B7 /* VideoGetService.swift */; };
 		D71F0EEC1D4CEED0004A46B7 /* UserGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71F0EEB1D4CEED0004A46B7 /* UserGetService.swift */; };
@@ -46,8 +49,6 @@
 		D75C69BF1D4FEF0A00AE5274 /* AudioResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */; };
 		D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */; };
 		D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */; };
-		D75C69C81D502B5F00AE5274 /* StoryboardMail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75C69C71D502B5F00AE5274 /* StoryboardMail.storyboard */; };
-		D75C69CA1D502B7C00AE5274 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C91D502B7C00AE5274 /* MailViewController.swift */; };
 		D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F24E71D4E2ED00024448A /* urlsEn.swift */; };
 		D7D8C65A1D4B61F900DC1A5B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7D8C6591D4B61F900DC1A5B /* Podfile */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,9 @@
 		D7060D341D52BC3B006AE80C /* CustomCellAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellAudio.swift; sourceTree = "<group>"; };
 		D70B1CBE1D514D7D0068E1E7 /* FunctionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsViewController.swift; sourceTree = "<group>"; };
 		D70B1CC01D520B1C0068E1E7 /* CustomCellUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellUser.swift; sourceTree = "<group>"; };
+		D7100A7F1D5A7A4300EDB033 /* AudioAlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioAlbumModel.swift; sourceTree = "<group>"; };
+		D7100A811D5A7A6400EDB033 /* AudioAlbumResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioAlbumResponseModel.swift; sourceTree = "<group>"; };
+		D7100A831D5A91AC00EDB033 /* CustomCellAudioList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellAudioList.swift; sourceTree = "<group>"; };
 		D71F0EE71D4CEE50004A46B7 /* AudioGetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioGetService.swift; sourceTree = "<group>"; };
 		D71F0EE91D4CEEC2004A46B7 /* VideoGetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGetService.swift; sourceTree = "<group>"; };
 		D71F0EEB1D4CEED0004A46B7 /* UserGetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGetService.swift; sourceTree = "<group>"; };
@@ -115,8 +119,6 @@
 		D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioResponseModel.swift; sourceTree = "<group>"; };
 		D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoResponseModel.swift; sourceTree = "<group>"; };
 		D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResponseModel.swift; sourceTree = "<group>"; };
-		D75C69C71D502B5F00AE5274 /* StoryboardMail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardMail.storyboard; sourceTree = "<group>"; };
-		D75C69C91D502B7C00AE5274 /* MailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		D76F24E71D4E2ED00024448A /* urlsEn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlsEn.swift; sourceTree = "<group>"; };
 		D7D8C6591D4B61F900DC1A5B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ECFC9AABCB0716A713BE6CE3 /* Pods-AlamofirePodsHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofirePodsHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofirePodsHome/Pods-AlamofirePodsHome.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				D751B1EE1D53F2180025B18E /* Main.storyboard */,
-				D75C69C61D502B2400AE5274 /* Test3 */,
 				D71F0EF81D4CEF73004A46B7 /* MainApiService.swift */,
 				D71F0EEF1D4CEF06004A46B7 /* Model */,
 				D71F0EE61D4CEE22004A46B7 /* API */,
@@ -208,6 +209,7 @@
 				D75AB3561D57959C00FD8467 /* PhotoCell.swift */,
 				D75AB3581D5798E300FD8467 /* DetailPhoto.swift */,
 				D75AB35C1D57ECFD00FD8467 /* AlbumsTableViewController.swift */,
+				D7100A831D5A91AC00EDB033 /* CustomCellAudioList.swift */,
 			);
 			path = AlamofirePodsHome;
 			sourceTree = "<group>";
@@ -257,17 +259,10 @@
 				D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */,
 				D75AB3501D576FC000FD8467 /* AlbumModel.swift */,
 				D75AB3521D5773E200FD8467 /* AlbumResponseModel.swift */,
+				D7100A7F1D5A7A4300EDB033 /* AudioAlbumModel.swift */,
+				D7100A811D5A7A6400EDB033 /* AudioAlbumResponseModel.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		D75C69C61D502B2400AE5274 /* Test3 */ = {
-			isa = PBXGroup;
-			children = (
-				D75C69C71D502B5F00AE5274 /* StoryboardMail.storyboard */,
-				D75C69C91D502B7C00AE5274 /* MailViewController.swift */,
-			);
-			name = Test3;
 			sourceTree = "<group>";
 		};
 		DF69DEFFC658DA0FA5661093 /* Frameworks */ = {
@@ -385,7 +380,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75C69C81D502B5F00AE5274 /* StoryboardMail.storyboard in Resources */,
 				D7002EEA1D4AB2D50014728D /* LaunchScreen.storyboard in Resources */,
 				D7002EE71D4AB2D50014728D /* Assets.xcassets in Resources */,
 				D751B1F01D53F2180025B18E /* Main.storyboard in Resources */,
@@ -476,6 +470,7 @@
 				D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */,
 				D71F0EFB1D4CF0FA004A46B7 /* AuthorizationService.swift in Sources */,
 				D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */,
+				D7100A841D5A91AC00EDB033 /* CustomCellAudioList.swift in Sources */,
 				D7060D331D52B43D006AE80C /* AudiosViewController.swift in Sources */,
 				D7002EE21D4AB2D50014728D /* ViewController.swift in Sources */,
 				D71F0EF31D4CEF2C004A46B7 /* VideoModel.swift in Sources */,
@@ -488,7 +483,6 @@
 				D75AB3591D5798E300FD8467 /* DetailPhoto.swift in Sources */,
 				D7002EE01D4AB2D50014728D /* AppDelegate.swift in Sources */,
 				D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */,
-				D75C69CA1D502B7C00AE5274 /* MailViewController.swift in Sources */,
 				D75AB3571D57959C00FD8467 /* PhotoCell.swift in Sources */,
 				D71F0EF71D4CEF4A004A46B7 /* UserModel.swift in Sources */,
 				D70B1CC11D520B1C0068E1E7 /* CustomCellUser.swift in Sources */,
@@ -496,7 +490,9 @@
 				D75C69BD1D4FEE8600AE5274 /* UserResponseModel.swift in Sources */,
 				D71F0EFD1D4D679B004A46B7 /* ApiError.swift in Sources */,
 				D75AB34F1D576C6200FD8467 /* PhotoAlbumsCell.swift in Sources */,
+				D7100A801D5A7A4300EDB033 /* AudioAlbumModel.swift in Sources */,
 				D71F0EEE1D4CEEE6004A46B7 /* PhotoGetService.swift in Sources */,
+				D7100A821D5A7A6400EDB033 /* AudioAlbumResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,8 +47,7 @@ class DetailViewController: UIViewController {
         print (userFriendId)
         
     }
-    //
-    //func go() {
+   
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPhotoAlbums" {
            
@@ -56,17 +55,32 @@ class DetailViewController: UIViewController {
                 let destinationController = segue.destinationViewController as! PhotoAlbumsCollectionViewController
                 
                 destinationController.owner_id = userFriendId
-            
-      //
-      //  }
+    }
+    if segue.identifier == "showAudioAlbums" {
+        
+        
+        let destinationController = segue.destinationViewController as! AlbumsAudioTableViewController
+        
+        destinationController.owner_id = userFriendId
+        
+
+    }
         
         
         
+    if segue.identifier == "showDialogs" {
         
         
+        //let destinationController = segue.destinationViewController as! AlbumsAudioTableViewController
+        
+        //destinationController.owner_id = userFriendId
         
         
     }
+
+        
+        
+    
     
     }
     

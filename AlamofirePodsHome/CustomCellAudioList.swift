@@ -1,17 +1,19 @@
 //
-//  CustomCellAudio.swift
+//  CustomCellAudioList.swift
 //  AlamofirePodsHome
 //
-//  Created by Ann Goro on 8/3/16.
+//  Created by Ann Goro on 8/9/16.
 //  Copyright © 2016 Ann Goro. All rights reserved.
 //
 
-
+import Foundation
 import UIKit
 
-class CustomCellAudio: UITableViewCell {
+class CustomCellAudioList : UITableViewCell {
 
-    @IBOutlet weak var cellAudioAlbum: UILabel!
+
+  
+    @IBOutlet weak var trololo: UILabel!
     
     //@IBOutlet weak var audioLabel: UILabel!
     
@@ -24,5 +26,5 @@ class CustomCellAudio: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-}
+    }
 }

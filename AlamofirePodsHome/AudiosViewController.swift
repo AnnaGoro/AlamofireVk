@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class AudiosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AudiosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 
+    @IBOutlet weak var tableData: UITableView!
   
-    
-    var arrayAudiosTitles: [String] = [String] ()
-    
+    var owner_id : Int = 0
+    var album_id : Int = 0
     var audioGetService = AudioGetService()
    
     
@@ -24,19 +24,18 @@ class AudiosViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        audioGetService.getPopularAudioCount() { (data) in
-            print("getPopularAudioCount")
-            let audioModelArray = data.1
-            for value in audioModelArray {
+        audioGetService.getAudiosFromAlbum (String(owner_id), album_id: String(album_id)) { data in
+            
+            
+            let audioAlbumModelArr = data.1
+            for value in audioAlbumModelArr {
+                print (" get photos from \(value.owner_id)")
+                self.audioModelArray.append(value)
                 
-                self.arrayAudiosTitles.append(value.title!)
-                print (value.title!)
                 
             }
             
-            //self.tableData.reloadData()
-            
-            print ("get audio by id \(data.1[0].toJSONString())   \(data.0)")
+            self.tableData.reloadData()
             
         }
         
@@ -52,17 +51,17 @@ class AudiosViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayAudiosTitles.count
+     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return audioModelArray.count
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellId = "cellAudios"
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! CustomCellAudio
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! CustomCellAudioList
         
-        cell.audioLabel!.text = arrayAudiosTitles[indexPath.row]
+        cell.trololo.text = audioModelArray[indexPath.row].title
         
         return cell
     }

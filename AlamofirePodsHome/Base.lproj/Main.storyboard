@@ -196,6 +196,59 @@
             </objects>
             <point key="canvasLocation" x="2191.5" y="882"/>
         </scene>
+        <!--Albums Audio Table View Controller-->
+        <scene sceneID="fa5-Iq-b2d">
+            <objects>
+                <tableViewController id="B5Y-Ki-X5W" customClass="AlbumsAudioTableViewController" customModule="AlamofirePodsHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bbb-Yz-86c">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellAudioAlbums" id="Ugs-uO-HYo" customClass="CustomCellAudio" customModule="AlamofirePodsHome" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ugs-uO-HYo" id="gm3-Qo-1zg">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4On-JE-ON2">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="8" y="0.0" width="312" height="35"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="4On-JE-ON2"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="4On-JE-ON2"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellAudioAlbum" destination="4On-JE-ON2" id="egq-DW-5zo"/>
+                                    <segue destination="y2a-Kg-Hfk" kind="show" identifier="showAudiosFromAlbum" id="HAF-mN-UkO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B5Y-Ki-X5W" id="DMI-Z9-GbP"/>
+                            <outlet property="delegate" destination="B5Y-Ki-X5W" id="9mU-5W-G6n"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableData" destination="Bbb-Yz-86c" id="JBH-xp-UX0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFt-mX-yrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2665.5" y="173"/>
+        </scene>
         <!--Friends-->
         <scene sceneID="mal-7Z-EyF">
             <objects>
@@ -406,13 +459,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N7p-c0-Y7d">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rvC-bZ-58D">
-                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="CollectionUsers"/>
-                                </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellAudios" id="miK-xf-XGh" customClass="CustomCellAudio" customModule="AlamofirePodsHome" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellAudios" id="miK-xf-XGh" customClass="CustomCellAudioList" customModule="AlamofirePodsHome" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="miK-xf-XGh" id="3WT-9N-3gX">
@@ -440,11 +488,18 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="trololo" destination="Gh2-by-oiX" id="nDJ-Vl-Kd4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="y2a-Kg-Hfk" id="SYj-EI-DE6"/>
+                                    <outlet property="delegate" destination="y2a-Kg-Hfk" id="gu0-Hr-i3v"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -459,10 +514,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="tableData" destination="N7p-c0-Y7d" id="D5O-iq-3sH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHc-lc-gNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4030.5" y="284"/>
+            <point key="canvasLocation" x="3340.5" y="189"/>
         </scene>
         <!--UICollectionView-->
         <scene sceneID="1yB-fr-fHm">
@@ -598,56 +656,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9m-Xd-ZD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879.5" y="158"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="ASu-wf-aWe">
-            <objects>
-                <tableViewController id="wt6-IR-Wx8" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qp0-kv-7el">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gbh-OQ-WHA">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gbh-OQ-WHA" id="TxA-yC-J5n">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="audio album name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS4-KG-4hx">
-                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="8" y="0.0" width="384" height="35"/>
-                                            </variation>
-                                        </label>
-                                    </subviews>
-                                    <variation key="default">
-                                        <mask key="subviews">
-                                            <exclude reference="TS4-KG-4hx"/>
-                                        </mask>
-                                    </variation>
-                                    <variation key="widthClass=compact">
-                                        <mask key="subviews">
-                                            <include reference="TS4-KG-4hx"/>
-                                        </mask>
-                                    </variation>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="wt6-IR-Wx8" id="CgC-KV-ddd"/>
-                            <outlet property="delegate" destination="wt6-IR-Wx8" id="ZkY-WS-xdc"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ISQ-rV-Agk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2761.5" y="167"/>
+            <point key="canvasLocation" x="1138.5" y="250"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="bg7-gi-ogk">
@@ -703,23 +712,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5W-YF-AJ8">
-                                <rect key="frame" x="20" y="20" width="55" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="AuL-D8-ekd"/>
-                                </constraints>
-                                <state key="normal" title="Audios"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="AuL-D8-ekd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="AuL-D8-ekd"/>
-                                    </mask>
-                                </variation>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdT-cn-XML">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
@@ -736,6 +728,26 @@
                                         <include reference="8LN-Mf-TBI"/>
                                     </mask>
                                 </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5W-YF-AJ8">
+                                <rect key="frame" x="20" y="20" width="55" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="AuL-D8-ekd"/>
+                                </constraints>
+                                <state key="normal" title="Audios"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AuL-D8-ekd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="AuL-D8-ekd"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="B5Y-Ki-X5W" kind="show" identifier="showAudioAlbums" id="PYj-Xq-wlA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -770,8 +782,8 @@
                                 <exclude reference="VrA-Sw-BvZ"/>
                                 <exclude reference="pdQ-cW-CFO"/>
                                 <exclude reference="RIn-Pq-F9o"/>
-                                <exclude reference="U5W-YF-AJ8"/>
                                 <exclude reference="bdT-cn-XML"/>
+                                <exclude reference="U5W-YF-AJ8"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="FZO-cu-zng"/>
@@ -803,8 +815,8 @@
                                 <include reference="VrA-Sw-BvZ"/>
                                 <include reference="pdQ-cW-CFO"/>
                                 <include reference="RIn-Pq-F9o"/>
-                                <include reference="U5W-YF-AJ8"/>
                                 <include reference="bdT-cn-XML"/>
+                                <include reference="U5W-YF-AJ8"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="FZO-cu-zng"/>
