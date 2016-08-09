@@ -46,14 +46,10 @@
 		D75C69BF1D4FEF0A00AE5274 /* AudioResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */; };
 		D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */; };
 		D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */; };
-		D75C69C51D5011F400AE5274 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C41D5011F400AE5274 /* WebViewController.swift */; };
 		D75C69C81D502B5F00AE5274 /* StoryboardMail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75C69C71D502B5F00AE5274 /* StoryboardMail.storyboard */; };
 		D75C69CA1D502B7C00AE5274 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C91D502B7C00AE5274 /* MailViewController.swift */; };
 		D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F24E71D4E2ED00024448A /* urlsEn.swift */; };
-		D76F24EA1D4F5BE00024448A /* VKSdkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F24E91D4F5BDF0024448A /* VKSdkDelegate.swift */; };
 		D7D8C65A1D4B61F900DC1A5B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7D8C6591D4B61F900DC1A5B /* Podfile */; };
-		D7E8017E1D4FB61C00D373E1 /* FuckingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8017D1D4FB61C00D373E1 /* FuckingTest.swift */; };
-		D7E801801D4FB64A00D373E1 /* FuckingModelsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8017F1D4FB64A00D373E1 /* FuckingModelsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,14 +115,10 @@
 		D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioResponseModel.swift; sourceTree = "<group>"; };
 		D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoResponseModel.swift; sourceTree = "<group>"; };
 		D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResponseModel.swift; sourceTree = "<group>"; };
-		D75C69C41D5011F400AE5274 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D75C69C71D502B5F00AE5274 /* StoryboardMail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardMail.storyboard; sourceTree = "<group>"; };
 		D75C69C91D502B7C00AE5274 /* MailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		D76F24E71D4E2ED00024448A /* urlsEn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlsEn.swift; sourceTree = "<group>"; };
-		D76F24E91D4F5BDF0024448A /* VKSdkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKSdkDelegate.swift; sourceTree = "<group>"; };
 		D7D8C6591D4B61F900DC1A5B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D7E8017D1D4FB61C00D373E1 /* FuckingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuckingTest.swift; sourceTree = "<group>"; };
-		D7E8017F1D4FB64A00D373E1 /* FuckingModelsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuckingModelsTest.swift; sourceTree = "<group>"; };
 		ECFC9AABCB0716A713BE6CE3 /* Pods-AlamofirePodsHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofirePodsHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofirePodsHome/Pods-AlamofirePodsHome.release.xcconfig"; sourceTree = "<group>"; };
 		FD3AEC1FE219E39CDAA32BAB /* Pods_AlamofirePodsHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlamofirePodsHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -194,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				D751B1EE1D53F2180025B18E /* Main.storyboard */,
-				D7060D2B1D5286BE006AE80C /* Test */,
 				D75C69C61D502B2400AE5274 /* Test3 */,
 				D71F0EF81D4CEF73004A46B7 /* MainApiService.swift */,
 				D71F0EEF1D4CEF06004A46B7 /* Model */,
@@ -204,8 +195,6 @@
 				D7002EE61D4AB2D50014728D /* Assets.xcassets */,
 				D7002EE81D4AB2D50014728D /* LaunchScreen.storyboard */,
 				D7002EEB1D4AB2D50014728D /* Info.plist */,
-				D76F24E91D4F5BDF0024448A /* VKSdkDelegate.swift */,
-				D75C69C41D5011F400AE5274 /* WebViewController.swift */,
 				D70B1CBE1D514D7D0068E1E7 /* FunctionsViewController.swift */,
 				D70B1CC01D520B1C0068E1E7 /* CustomCellUser.swift */,
 				D7060D2C1D52872C006AE80C /* CollectionViewCell.swift */,
@@ -239,15 +228,6 @@
 				D7002F011D4AB2D70014728D /* Info.plist */,
 			);
 			path = AlamofirePodsHomeUITests;
-			sourceTree = "<group>";
-		};
-		D7060D2B1D5286BE006AE80C /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				D7E8017D1D4FB61C00D373E1 /* FuckingTest.swift */,
-				D7E8017F1D4FB64A00D373E1 /* FuckingModelsTest.swift */,
-			);
-			name = Test;
 			sourceTree = "<group>";
 		};
 		D71F0EE61D4CEE22004A46B7 /* API */ = {
@@ -487,17 +467,14 @@
 				D70B1CBF1D514D7E0068E1E7 /* FunctionsViewController.swift in Sources */,
 				D71F0EF51D4CEF3C004A46B7 /* PhotoModel.swift in Sources */,
 				D75AB3531D5773E200FD8467 /* AlbumResponseModel.swift in Sources */,
-				D75C69C51D5011F400AE5274 /* WebViewController.swift in Sources */,
 				D7060D351D52BC3B006AE80C /* CustomCellAudio.swift in Sources */,
 				D71F0EF11D4CEF1D004A46B7 /* AudioModel.swift in Sources */,
 				D71F0EEA1D4CEEC2004A46B7 /* VideoGetService.swift in Sources */,
 				D75C69BF1D4FEF0A00AE5274 /* AudioResponseModel.swift in Sources */,
 				D7060D2F1D528771006AE80C /* DetailViewController.swift in Sources */,
 				D7060D2D1D52872C006AE80C /* CollectionViewCell.swift in Sources */,
-				D7E8017E1D4FB61C00D373E1 /* FuckingTest.swift in Sources */,
 				D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */,
 				D71F0EFB1D4CF0FA004A46B7 /* AuthorizationService.swift in Sources */,
-				D7E801801D4FB64A00D373E1 /* FuckingModelsTest.swift in Sources */,
 				D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */,
 				D7060D331D52B43D006AE80C /* AudiosViewController.swift in Sources */,
 				D7002EE21D4AB2D50014728D /* ViewController.swift in Sources */,
@@ -512,7 +489,6 @@
 				D7002EE01D4AB2D50014728D /* AppDelegate.swift in Sources */,
 				D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */,
 				D75C69CA1D502B7C00AE5274 /* MailViewController.swift in Sources */,
-				D76F24EA1D4F5BE00024448A /* VKSdkDelegate.swift in Sources */,
 				D75AB3571D57959C00FD8467 /* PhotoCell.swift in Sources */,
 				D71F0EF71D4CEF4A004A46B7 /* UserModel.swift in Sources */,
 				D70B1CC11D520B1C0068E1E7 /* CustomCellUser.swift in Sources */,

@@ -19,9 +19,10 @@ class  PhotoModel:Mappable {
     var date : NSDate? //unix time
     var src_small : String?
     var src_xbig: String?
-    
-   
-    
+    var src_xxbig : String?
+    var src_xxxbig : String?
+    var src_big : String?
+    var src : String?
     
     required init?(_ map: Map){
         
@@ -36,7 +37,10 @@ class  PhotoModel:Mappable {
         date <- (map["date"], DateTransform())
         src_small <- map["src_small"]
         src_xbig <- map["src_xbig"]
-        
+        src_xxbig <- map["src_xxbig"]
+        src_xxxbig <- map["src_xxxbig"]
+        src_big <- map["src_big"]
+        src <- map["src"]
     }
 
     

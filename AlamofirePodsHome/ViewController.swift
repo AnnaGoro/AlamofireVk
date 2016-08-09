@@ -10,35 +10,16 @@ import UIKit
 import VK_ios_sdk
 class ViewController : UIViewController, UIWebViewDelegate{
     
-   // @IBOutlet weak var okBtn: UIButton!
+
     @IBOutlet weak var authWebView: UIWebView!
-    //var webViewController = WebViewController()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         //okBtn.enabled = false
+       
         authWebView.delegate = self
   
        
-        
-        let myURL = NSURL(string: Authorization.REQUEST_STR);
-        let myURLRequest:NSURLRequest = NSURLRequest(URL: myURL!);
-    
-        
-        
-        if NSUserDefaults.standardUserDefaults().stringForKey("access_token") == nil {
-                authWebView.loadRequest(myURLRequest)
-                print ("load request")
-               // okBtn.enabled = true
-        } else {
-        // EDITED FROM shouldPerformSegueWithIdentifier
-             goToFriends()
-                print ("showFriends")
-               // okBtn.enabled = true
-            
-            
-            
-        }
         
             
         }
@@ -48,7 +29,28 @@ class ViewController : UIViewController, UIWebViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
- 
+    func webViewDidStartLoad(webView: UIWebView) {
+        
+        let myURL = NSURL(string: Authorization.REQUEST_STR);
+        let myURLRequest:NSURLRequest = NSURLRequest(URL: myURL!);
+        
+        
+        
+        if NSUserDefaults.standardUserDefaults().stringForKey("access_token") == nil {
+            authWebView.loadRequest(myURLRequest)
+            debugPrint ("load request")
+           
+        } else {
+           
+            
+            debugPrint ("showFriends")
+         
+           // goToFriends()
+           performSegueWithIdentifier("showFriends", sender: self)
+            
+        }
+
+    }
    
     func webViewDidFinishLoad(authWebView: UIWebView) {
         
@@ -58,11 +60,11 @@ class ViewController : UIViewController, UIWebViewDelegate{
         var user: [String : String] = [String : String]()
         //смотрим на адрес открытой станицы
         let currentURL : String = (authWebView.request?.URL!.absoluteString)!
-        // var currentURL = webView.request!.URL!.absoluteString;
-        var textRange = currentURL.lowercaseString.rangeOfString("access_token".lowercaseString)
+      
+        let textRange = currentURL.lowercaseString.rangeOfString("access_token".lowercaseString)
         //смотрим, содержится ли в адресе информация о токене
         if textRange != nil {
-            //Ура, содержится, вытягиваем ее
+            
             var data: [String] = currentURL.componentsSeparatedByCharactersInSet(NSCharacterSet(charactersInString: "=&"))
             user["access_token"] = data[1]
             user["expires_in"] = data[3]
@@ -92,8 +94,7 @@ class ViewController : UIViewController, UIWebViewDelegate{
     
     func goToFriends() {
         //et vc = FunctionsViewController()
-       // self.presentViewController(vc, animated: true, completion: nil)
-        self.shouldPerformSegueWithIdentifier("showFriends", sender: self)
+         performSegueWithIdentifier("showFriends", sender: self)
     }
     
     

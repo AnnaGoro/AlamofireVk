@@ -39,7 +39,6 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
             
             self.collectionData.reloadData()
             
-            //  print ("get albums \(data.1[0].toJSONString())   \(data.0)")
             
             
         }
@@ -66,7 +65,12 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
      
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         
-        let URL = photosModelArray[indexPath.row].src_xbig!
+       let URL = photosModelArray[indexPath.row].src_xxxbig ?? photosModelArray[indexPath.row].src_xxbig!
+        // photosModelArray[indexPath.row].src_xxbig!
+           //  photosModelArray[indexPath.row].src_xbig!
+            // photosModelArray[indexPath.row].src_big!
+            // photosModelArray[indexPath.row].src_small!
+        
         let placeholder = UIImage(named: "img_nature")!
         cell.photoImageView.load(URL, placeholder: placeholder) { URL, image, error, cacheType in
             print("URL \(URL)")
@@ -114,7 +118,13 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
     
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        url = photosModelArray[indexPath.item].src_xbig!
+         //??
+        url = photosModelArray[indexPath.row].src_xxxbig ?? photosModelArray[indexPath.row].src_xxbig!
+            //?? photosModelArray[indexPath.row].src_xxbig!
+       // photosModelArray[indexPath.row].src!
+           // ?? photosModelArray[indexPath.row].src_xbig!
+           // ?? photosModelArray[indexPath.row].src_big!
+          //  ?? photosModelArray[indexPath.row].src_small!
         
         // Pass control to the PhotoViewController
         self.performSegueWithIdentifier("showDetailPhoto", sender:self)
