@@ -44,9 +44,9 @@ class ViewController : UIViewController, UIWebViewDelegate{
            
             
             debugPrint ("showFriends")
-         
-           // goToFriends()
-           performSegueWithIdentifier("showFriends", sender: self)
+            
+                       goToFriends()
+          
             
         }
 
@@ -89,13 +89,21 @@ class ViewController : UIViewController, UIWebViewDelegate{
     }
     
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var destinationController : UINavigationController = segue.destinationViewController as! UINavigationController
+       
+        print ("prepareForSegue")
+    }
     
     
     func goToFriends() {
-        //et vc = FunctionsViewController()
          performSegueWithIdentifier("showFriends", sender: self)
-    }
+      //  NSOperationQueue().addOperationWithBlock {
+            print("go to friends()")
+         //   [weak self] in self.performSegueWithIdentifier("showFriends", sender: nil)
+      //  }
+
+          }
     
     
 }

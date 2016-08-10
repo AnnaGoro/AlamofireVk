@@ -29,7 +29,7 @@ class AudioGetService {
         
         
         
-        Alamofire.request(.GET,  mainUrlMethod + mNAudioGetAlbums, parameters: ["owner_id" : owner_id, "v" : "5.53",  "access_token" : accessToken] ).validate()
+        Alamofire.request(.GET,  mainUrlMethod + mNAudioGetAlbums, parameters: ["owner_id" : owner_id, "access_token" : accessToken] ).validate()
             .responseJSON { response in
                 
                 if let JSON = response.result.value {
@@ -44,15 +44,15 @@ class AudioGetService {
         
         var myData: [AudioAlbumModel] = [AudioAlbumModel]()
         
-        Alamofire.request(.GET, mainUrlMethod + mNAudioGetAlbums, parameters: ["owner_id" : owner_id, "v" : "5.53",  "access_token" : accessToken] ).validate()
+        Alamofire.request(.GET, mainUrlMethod + mNAudioGetAlbums, parameters: ["owner_id" : owner_id, "access_token" : accessToken] ).validate()
             .responseObject { (response: Response<AudioAlbumResponseModel, NSError>) in
                 let audioAlbumResponseModel = response.result.value
-                print("getAlbums before unwrapping")
+                print("getAudio Albums before unwrapping")
                 if let audioAlbumResponseModel = audioAlbumResponseModel {
                     if let audioAlbumModel = audioAlbumResponseModel.response {
                         myData = audioAlbumModel
                         completionHandler(true, myData)
-                        /print(" getAlbums PhotoGetService \(myData[1].owner_id)")
+                        print(" getAudioAlbums AudioGetService \(myData[1].owner_id)")
                     }
                 }
         }

@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 class AudioAlbumResponseModel : Mappable {
-    var count : Int?
+    //var count : Int?
     var response : [AudioAlbumModel]?
     
     required init?(_ map: Map){
@@ -19,7 +19,7 @@ class AudioAlbumResponseModel : Mappable {
     
     func mapping(map: Map) {
         
-       count <- map["count"]
+       //count <- map["count"]
         response <- map["response"]
        
         
