@@ -92,7 +92,7 @@ class ViewController : UIViewController, UIWebViewDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var destinationController : UINavigationController = segue.destinationViewController as! UINavigationController
        
-        print ("prepareForSegue")
+      
     }
     
     

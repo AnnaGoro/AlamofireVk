@@ -1,10 +1,4 @@
-//
-//  NewViewController.swift
-//  AlamofirePodsHome
-//
-//  Created by Ann Goro on 8/3/16.
-//  Copyright © 2016 Ann Goro. All rights reserved.
-//
+
 
 
 import UIKit
@@ -19,7 +13,7 @@ class DetailViewController: UIViewController {
     
     @IBAction func photoAlbBtn(sender: AnyObject) {
         
-       // go()
+      
         
         
     }
@@ -34,18 +28,13 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //imageView.image = imageUser
+       
         bDateLabel.text = bDate
         lastNameLabel.text = lastName
         firstNameLabel.text = firstName
         imageView.load(url)
-        //imageView.layer.cornerRadius = 100.0
-       // imageView.clipsToBounds = true
-        //TODO add buttons with segues to other methods and send data (user_id)!!!!!
-        
-        
-        print (userFriendId)
-        
+    
+  
     }
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

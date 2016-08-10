@@ -1,10 +1,4 @@
-//
-//  AlbumsTableViewController.swift
-//  AlamofirePodsHome
-//
-//  Created by Ann Goro on 8/7/16.
-//  Copyright © 2016 Ann Goro. All rights reserved.
-//
+
 
 import Foundation
 import UIKit
@@ -97,8 +91,7 @@ class AlbumsAudioTableViewController: UITableViewController {
                 
                destinationController.owner_id = owner_id
                 
-               // destinationController.owner_id = audioAlbumModelArray[indexPath.row].owner_id!
-                
+                            
                 
             
         }

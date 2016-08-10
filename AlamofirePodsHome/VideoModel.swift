@@ -1,10 +1,4 @@
-//
-//  VideoModel.swift
-//  AlamofirePodsHome
-//
-//  Created by Ann Goro on 7/30/16.
-//  Copyright © 2016 Ann Goro. All rights reserved.
-//
+
 
 import Foundation
 import ObjectMapper
@@ -46,35 +40,6 @@ class VideoModel:Mappable {
     
     
     
-/*
-    init (id : Int,
-    owner_id : Int,
-    title : String,
-    description : String,
-    duration : Int,
-    photo_130 : String,
-    date : IntMax,
-    adding_date : IntMax,
-    views : Int?,
-    comments : Int?) {
-    
-    
-        self.id = id
-        self.owner_id = owner_id
-        self.title = title
-        self.description = description
-        self.duration = duration
-        self.photo_130 = photo_130
-        self.date = date
-        self.adding_date = adding_date
-        self.views = views
-        self.comments = comments
-    
-    
-    }
-
-*/
-
 
 
 }

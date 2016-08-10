@@ -1,10 +1,4 @@
-//
-//  AuthorizationService.swift
-//  AlamofirePodsHome
-//
-//  Created by Ann Goro on 7/30/16.
-//  Copyright © 2016 Ann Goro. All rights reserved.
-//
+
 
 import Foundation
 
@@ -12,10 +6,6 @@ class Authorization {
 
     static let secureKey = "0YFFOirBPmeynCFQGG2W"
     static let applicationVkId = 5570019
-    
-    //var pattern = Pattern.compile("https?://(api|oauth)\\.vk\\.com/blank\\.html.*");
-
-//https://oauth.vk.com/authorize?client_id=1&display=page&redirect_uri=http://example.com/callback&scope=friends&response_type=token&v=5.53&state=123456   
     
     static let AUTH_URI = "https://oauth.vk.com/authorize?"
     

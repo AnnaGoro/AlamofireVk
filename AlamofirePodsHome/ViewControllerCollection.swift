@@ -1,10 +1,4 @@
-//
-//  ViewControllerCollection.swift
-//  AlamofirePodsHome
-//
-//  Created by Ann Goro on 8/3/16.
-//  Copyright © 2016 Ann Goro. All rights reserved.
-//
+
 import UIKit
 import ImageLoader
 
@@ -42,10 +36,7 @@ class ViewControllerCollection: UIViewController, UICollectionViewDataSource, UI
             }
             
             self.collectionData.reloadData()
-            
-            print ("get user by id \(data.1[0].toJSONString())   \(data.0)")
-            print ("get user from array \(userModelArray[0].first_name)   \(data.0)")
-            
+                       
         }
         
         

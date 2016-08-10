@@ -1,10 +1,3 @@
-//
-//  PhotoAlbumsCell.swift
-//  AlamofirePodsHome
-//
-//  Created by Ann Goro on 8/7/16.
-//  Copyright © 2016 Ann Goro. All rights reserved.
-//
 
 import Foundation
 import UIKit

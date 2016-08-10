@@ -1,10 +1,3 @@
-//
-//  PhotoGetService.swift
-//  AlamofirePodsHome
-//
-//  Created by Ann Goro on 7/30/16.
-//  Copyright © 2016 Ann Goro. All rights reserved.
-//
 
 import Foundation
 import Alamofire
@@ -24,12 +17,12 @@ class PhotoGetService {
     
     
     func getAlbumsJSON (owner_id : String) {
-        // var myData: [UserModel] = [UserModel]()
+    
         
         Alamofire.request(.GET, mainUrlMethod + methodNameAlbums, parameters: ["owner_id" : owner_id, "need_covers" : "1",  "access_token" : accessToken]).validate()
             .responseJSON{ response in
                 if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
+                   
                 }
         }
         
@@ -37,12 +30,12 @@ class PhotoGetService {
     }
 
     func getPhotosJSON (owner_id : String, album_id : String) {
-        // var myData: [UserModel] = [UserModel]()
+      
         
         Alamofire.request(.GET, mainUrlMethod + methodNamePhotosGet, parameters: ["owner_id" : owner_id, "album_id" : album_id,  "access_token" : accessToken]).validate()
             .responseJSON{ response in
                 if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
+                   
                 }
         }
         
@@ -62,7 +55,7 @@ class PhotoGetService {
                     if let albumModel = albumResponseModel.response {
                         myData = albumModel
                         completionHandler(true, myData)
-                        //print(" getAlbums PhotoGetService \(myData[1].owner_id)")
+              
                     }
                 }
         }
@@ -80,7 +73,7 @@ class PhotoGetService {
                     if let photoModel = photoResponseModel.response {
                         myData = photoModel
                         completionHandler(true, (myData))
-                        print(myData[0].owner_id)
+                        
                     }
                 }
         }

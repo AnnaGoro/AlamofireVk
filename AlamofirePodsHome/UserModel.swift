@@ -1,10 +1,4 @@
-//
-//  UserModel.swift
-//  AlamofirePodsHome
-//
-//  Created by Ann Goro on 7/30/16.
-//  Copyright © 2016 Ann Goro. All rights reserved.
-//
+
 
 import Foundation
 import ObjectMapper
@@ -58,30 +52,5 @@ class UserModel: Mappable {
          user_id <- map["user_id"]
     }
     
-    /*
-    init (id : Int,
-    first_name : String,
-    last_name : String,
-    photo_50 : String,
-    deactivated : String?,
-    hidden : Int,
-    bdate : String?,
-    books : String?,
-    interests : String?,
-    home_town : String?) {
-    
-        self.id = id
-        self.first_name = first_name
-        self.last_name = last_name
-        self.photo_50 = photo_50
-        self.deactivated = deactivated
-        self.hidden = hidden
-        self.bdate = bdate
-        self.books = books
-        self.interests = interests
-        self.home_town = home_town
-    
-    }
-   */
-    
+       
 }

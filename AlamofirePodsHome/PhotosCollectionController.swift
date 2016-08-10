@@ -1,10 +1,4 @@
-//
-//  PhotosCollectionController.swift
-//  AlamofirePodsHome
-//
-//  Created by Ann Goro on 8/7/16.
-//  Copyright © 2016 Ann Goro. All rights reserved.
-//
+
 
 import Foundation
 import UIKit
@@ -15,7 +9,7 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
 
     @IBOutlet var collectionData: UICollectionView!
     
-    //@IBOutlet weak var collectionData: UICollectionView!
+
     
     var photoGetService = PhotoGetService()
     var owner_id : Int = 0
@@ -25,7 +19,7 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //var s = owner_id as! String
+      
         print ("PhotosCollectionController")
         photoGetService.getPhotosJSON (String(owner_id), album_id: String (album_id))
         photoGetService.getPhotos(String(owner_id), album_id: String (album_id)) { (data) in
@@ -66,10 +60,7 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         
        let URL = photosModelArray[indexPath.row].src_xxxbig ?? photosModelArray[indexPath.row].src_xxbig!
-        // photosModelArray[indexPath.row].src_xxbig!
-           //  photosModelArray[indexPath.row].src_xbig!
-            // photosModelArray[indexPath.row].src_big!
-            // photosModelArray[indexPath.row].src_small!
+      
         
         let placeholder = UIImage(named: "img_nature")!
         cell.photoImageView.load(URL, placeholder: placeholder) { URL, image, error, cacheType in
@@ -86,9 +77,7 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
                 
                 
             }
-            
-            //cell.imageAlbum.layer.cornerRadius = 30.0
-            //cell.imageAlbum.clipsToBounds = true
+
         }
         
         
@@ -120,11 +109,7 @@ class PhotosCollectionController : UIViewController, UICollectionViewDataSource,
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
          //??
         url = photosModelArray[indexPath.row].src_xxxbig ?? photosModelArray[indexPath.row].src_xxbig!
-            //?? photosModelArray[indexPath.row].src_xxbig!
-       // photosModelArray[indexPath.row].src!
-           // ?? photosModelArray[indexPath.row].src_xbig!
-           // ?? photosModelArray[indexPath.row].src_big!
-          //  ?? photosModelArray[indexPath.row].src_small!
+        
         
         // Pass control to the PhotoViewController
         self.performSegueWithIdentifier("showDetailPhoto", sender:self)

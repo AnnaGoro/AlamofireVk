@@ -1,10 +1,4 @@
-//
-//  FunctionsViewController.swift
-//  AlamofirePodsHome
-//
-//  Created by Ann Goro on 8/2/16.
-//  Copyright © 2016 Ann Goro. All rights reserved.
-//
+
 
 import Foundation
 import UIKit
@@ -22,8 +16,7 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //userGetService.getFriendsJSON ()
-       // photoGetService.getAlbumsJSON ()
+     
         
         
         userGetService.getFriends() { (data) in
@@ -34,10 +27,6 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
             }
             self.tableData.reloadData()
            
-            
-            print ("get user by id \(data.1[0].toJSONString())   \(data.0)")
-            print ("get user from array \(userModelArray[0].first_name)   \(data.0)")
-            print ("get id from array \(userModelArray[0].id)   \(data.0)")
             
         }
         
@@ -107,8 +96,8 @@ class FunctionsViewController: UIViewController, UITableViewDataSource, UITableV
                 destinationController.bDate = userModelArray[indexPath.row].bdate ?? "no bDate"
                 destinationController.url = userModelArray[indexPath.row].photo_200_orig!
                 destinationController.userFriendId = userModelArray[indexPath.row].user_id!
-                 let s = userModelArray[indexPath.row].user_id
-                print ("********* id \(s)")
+                
+              
                
             }
     }
