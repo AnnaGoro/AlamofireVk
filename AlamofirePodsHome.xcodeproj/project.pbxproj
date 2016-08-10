@@ -49,6 +49,7 @@
 		D75C69BF1D4FEF0A00AE5274 /* AudioResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */; };
 		D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */; };
 		D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */; };
+		D75CB6D21D5BA19100A8A6F1 /* AudioAlbumListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CB6D11D5BA19100A8A6F1 /* AudioAlbumListResponseModel.swift */; };
 		D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F24E71D4E2ED00024448A /* urlsEn.swift */; };
 		D7D8C65A1D4B61F900DC1A5B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7D8C6591D4B61F900DC1A5B /* Podfile */; };
 /* End PBXBuildFile section */
@@ -119,6 +120,7 @@
 		D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioResponseModel.swift; sourceTree = "<group>"; };
 		D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoResponseModel.swift; sourceTree = "<group>"; };
 		D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResponseModel.swift; sourceTree = "<group>"; };
+		D75CB6D11D5BA19100A8A6F1 /* AudioAlbumListResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioAlbumListResponseModel.swift; sourceTree = "<group>"; };
 		D76F24E71D4E2ED00024448A /* urlsEn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlsEn.swift; sourceTree = "<group>"; };
 		D7D8C6591D4B61F900DC1A5B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ECFC9AABCB0716A713BE6CE3 /* Pods-AlamofirePodsHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofirePodsHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofirePodsHome/Pods-AlamofirePodsHome.release.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				D75AB3521D5773E200FD8467 /* AlbumResponseModel.swift */,
 				D7100A7F1D5A7A4300EDB033 /* AudioAlbumModel.swift */,
 				D7100A811D5A7A6400EDB033 /* AudioAlbumResponseModel.swift */,
+				D75CB6D11D5BA19100A8A6F1 /* AudioAlbumListResponseModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				D75C69BF1D4FEF0A00AE5274 /* AudioResponseModel.swift in Sources */,
 				D7060D2F1D528771006AE80C /* DetailViewController.swift in Sources */,
 				D7060D2D1D52872C006AE80C /* CollectionViewCell.swift in Sources */,
+				D75CB6D21D5BA19100A8A6F1 /* AudioAlbumListResponseModel.swift in Sources */,
 				D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */,
 				D71F0EFB1D4CF0FA004A46B7 /* AuthorizationService.swift in Sources */,
 				D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */,

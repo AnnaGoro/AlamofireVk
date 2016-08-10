@@ -29,7 +29,7 @@ class AudioGetService {
         
         
         
-        Alamofire.request(.GET,  mainUrlMethod + mNAudioGetAlbums, parameters: ["owner_id" : owner_id, "access_token" : accessToken] ).validate()
+        Alamofire.request(.GET,  mainUrlMethod + mNAudioGetAlbums, parameters: ["owner_id" : owner_id, "v" : "5,53", "access_token" : accessToken] ).validate()
             .responseJSON { response in
                 
                 if let JSON = response.result.value {
@@ -39,23 +39,38 @@ class AudioGetService {
     }
 
     
+    func getAudiosFromAlbumJSON(owner_id : String, album_id : String) {
+        
+        
+        
+        Alamofire.request(.GET,  mainUrlMethod + mNAudioGet, parameters: ["owner_id" : owner_id, "album_id" : album_id, "v" : "5,53", "access_token" : accessToken] ).validate()
+            .responseJSON { response in
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
+    }
+    
+
     
     func getAudioAlbums(owner_id : String, completionHandler: (Bool, [AudioAlbumModel]) -> ()) {
         
         var myData: [AudioAlbumModel] = [AudioAlbumModel]()
         
-        Alamofire.request(.GET, mainUrlMethod + mNAudioGetAlbums, parameters: ["owner_id" : owner_id, "access_token" : accessToken] ).validate()
+        Alamofire.request(.GET, mainUrlMethod + mNAudioGetAlbums, parameters: ["owner_id" : owner_id, "v" : "5,53", "access_token" : accessToken] ).validate()
             .responseObject { (response: Response<AudioAlbumResponseModel, NSError>) in
                 let audioAlbumResponseModel = response.result.value
                 print("getAudio Albums before unwrapping")
                 if let audioAlbumResponseModel = audioAlbumResponseModel {
-                    if let audioAlbumModel = audioAlbumResponseModel.response {
+                    if let audioAlbumListModel = audioAlbumResponseModel.response {
+                        if let audioAlbumModel = audioAlbumResponseModel.response?.items {
                         myData = audioAlbumModel
                         completionHandler(true, myData)
                         print(" getAudioAlbums AudioGetService \(myData[1].owner_id)")
                     }
                 }
-        }
+                } }
     }
 
     

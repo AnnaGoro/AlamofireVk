@@ -63,7 +63,7 @@ class AlbumsAudioTableViewController: UIViewController, UITableViewDataSource, U
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! CustomCellAudio
         
-        cell.cellAudioAlbum.text = String(audioAlbumModelArray[indexPath.row].album_id)
+        cell.cellAudioAlbum.text = String(audioAlbumModelArray[indexPath.row].title!)
         
         return cell
     }

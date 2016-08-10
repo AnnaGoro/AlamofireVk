@@ -49,6 +49,7 @@
                                 <exclude reference="MfS-fq-2zt"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Fiu-DF-jOG"/>
                                 <exclude reference="12U-Sg-sjF"/>
                                 <exclude reference="6ly-Pw-FBm"/>
                                 <exclude reference="Jav-l9-zuB"/>
@@ -57,7 +58,6 @@
                                 <exclude reference="RW8-K8-LYg"/>
                                 <exclude reference="bVE-nb-qlW"/>
                                 <exclude reference="y0l-TE-swK"/>
-                                <exclude reference="Fiu-DF-jOG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -66,6 +66,7 @@
                                 <include reference="MfS-fq-2zt"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Fiu-DF-jOG"/>
                                 <include reference="12U-Sg-sjF"/>
                                 <include reference="6ly-Pw-FBm"/>
                                 <include reference="Jav-l9-zuB"/>
@@ -74,7 +75,6 @@
                                 <include reference="RW8-K8-LYg"/>
                                 <exclude reference="bVE-nb-qlW"/>
                                 <exclude reference="y0l-TE-swK"/>
-                                <include reference="Fiu-DF-jOG"/>
                             </mask>
                         </variation>
                     </view>
@@ -201,12 +201,15 @@
             <objects>
                 <tableViewController id="B5Y-Ki-X5W" customClass="AlbumsAudioTableViewController" customModule="AlamofirePodsHome" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bbb-Yz-86c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellAudioAlbums" id="Ugs-uO-HYo" customClass="CustomCellAudio" customModule="AlamofirePodsHome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ugs-uO-HYo" id="gm3-Qo-1zg">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4On-JE-ON2">
@@ -453,7 +456,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ae2-j5-ZRM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Waa-jm-gRb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N7p-c0-Y7d">

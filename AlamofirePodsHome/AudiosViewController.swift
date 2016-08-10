@@ -24,6 +24,8 @@ class AudiosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        audioGetService.getAudiosFromAlbumJSON(String(owner_id), album_id: String(album_id))
+        
         audioGetService.getAudiosFromAlbum (String(owner_id), album_id: String(album_id)) { data in
             
             
