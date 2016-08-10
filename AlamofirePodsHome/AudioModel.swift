@@ -23,7 +23,7 @@ class AudioModel:Mappable {
     var date : NSDate?
     var no_search : Int?
     
-      var transformStringToInt = TransformOf<Int, String>(fromJSON: { Int($0!) }, toJSON: { $0.map { String($0) } })
+    
     
     required init?(_ map: Map){
         
@@ -42,24 +42,5 @@ class AudioModel:Mappable {
         no_search <- (map["no_search"] )
     }
 
-    
-    /*
-    init (id : Int, owner_id : Int, artist : String, title : String, duration : Int,  url : String, lyrics_id : Int, album_id : Int, genre_id : Int, date : NSDate, no_search : Int? ) {
-        
-        self.id = id
-        self.owner_id = owner_id
-        self.artist = artist
-        self.title = title
-        self.duration = duration
-        self.url = url
-        self.lyrics_id = lyrics_id
-        self.album_id = album_id
-        self.genre_id = genre_id
-        self.date = date
-        self.no_search = no_search
-    
-    }
-    
-    */
-}
+   }
 

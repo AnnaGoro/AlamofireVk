@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 
-class AlbumsAudioTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AlbumsAudioTableViewController: UITableViewController {
 
+   //, UITableViewDataSource, UITableViewDelegate
     @IBOutlet var tableData: UITableView!
 
+ 
     var owner_id : Int = 0
     var audioGetService = AudioGetService()
     var photoGetService = PhotoGetService()
@@ -53,12 +55,12 @@ class AlbumsAudioTableViewController: UIViewController, UITableViewDataSource, U
     }
     
     
-   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return audioAlbumModelArray.count
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellId = "cellAudioAlbums"
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! CustomCellAudio
@@ -71,6 +73,7 @@ class AlbumsAudioTableViewController: UIViewController, UITableViewDataSource, U
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "showAudiosFromAlbum" {
             if let indexPath = tableData.indexPathForSelectedRow {
                 
@@ -85,8 +88,20 @@ class AlbumsAudioTableViewController: UIViewController, UITableViewDataSource, U
             }
         }
         
-        
-
+       
+        if segue.identifier == "showAudiosFromUser" {
+            
+           
+                
+            let destinationController = segue.destinationViewController as! AllAudioTableViewController
+                
+               destinationController.owner_id = owner_id
+                
+               // destinationController.owner_id = audioAlbumModelArray[indexPath.row].owner_id!
+                
+                
+            
+        }
     
     
 

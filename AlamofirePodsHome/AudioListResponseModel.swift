@@ -1,17 +1,18 @@
 //
-//  AudioResponseModel.swift
+//  AudioListResponseModel.swift
 //  AlamofirePodsHome
 //
-//  Created by Ann Goro on 8/1/16.
+//  Created by Ann Goro on 8/10/16.
 //  Copyright © 2016 Ann Goro. All rights reserved.
 //
 
 import Foundation
 import ObjectMapper
 
-class AudioResponseModel: Mappable {
-    
-    var response  : AudioListResponseModel?
+class AudioListResponseModel : Mappable {
+
+    var count : Int?
+    var items : [AudioModel]?
     
     required init?(_ map: Map){
         
@@ -19,9 +20,15 @@ class AudioResponseModel: Mappable {
     
     func mapping(map: Map) {
         
-        
-        response <- map["response"]
+        count <- map["count"]
+        items <- map["items"]
         
         
     }
+
+
+
+
+
+
 }

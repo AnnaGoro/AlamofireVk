@@ -50,6 +50,9 @@
 		D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */; };
 		D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */; };
 		D75CB6D21D5BA19100A8A6F1 /* AudioAlbumListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CB6D11D5BA19100A8A6F1 /* AudioAlbumListResponseModel.swift */; };
+		D75CB6D41D5BAF0800A8A6F1 /* AudioListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CB6D31D5BAF0800A8A6F1 /* AudioListResponseModel.swift */; };
+		D75CB6DC1D5BB18800A8A6F1 /* AllAudioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CB6DB1D5BB18800A8A6F1 /* AllAudioTableViewController.swift */; };
+		D75CB6DE1D5BB22C00A8A6F1 /* CellUserAudios.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CB6DD1D5BB22C00A8A6F1 /* CellUserAudios.swift */; };
 		D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F24E71D4E2ED00024448A /* urlsEn.swift */; };
 		D7D8C65A1D4B61F900DC1A5B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7D8C6591D4B61F900DC1A5B /* Podfile */; };
 /* End PBXBuildFile section */
@@ -121,6 +124,9 @@
 		D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoResponseModel.swift; sourceTree = "<group>"; };
 		D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResponseModel.swift; sourceTree = "<group>"; };
 		D75CB6D11D5BA19100A8A6F1 /* AudioAlbumListResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioAlbumListResponseModel.swift; sourceTree = "<group>"; };
+		D75CB6D31D5BAF0800A8A6F1 /* AudioListResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioListResponseModel.swift; sourceTree = "<group>"; };
+		D75CB6DB1D5BB18800A8A6F1 /* AllAudioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllAudioTableViewController.swift; sourceTree = "<group>"; };
+		D75CB6DD1D5BB22C00A8A6F1 /* CellUserAudios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellUserAudios.swift; sourceTree = "<group>"; };
 		D76F24E71D4E2ED00024448A /* urlsEn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = urlsEn.swift; sourceTree = "<group>"; };
 		D7D8C6591D4B61F900DC1A5B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ECFC9AABCB0716A713BE6CE3 /* Pods-AlamofirePodsHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofirePodsHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofirePodsHome/Pods-AlamofirePodsHome.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +218,8 @@
 				D75AB3581D5798E300FD8467 /* DetailPhoto.swift */,
 				D75AB35C1D57ECFD00FD8467 /* AlbumsTableViewController.swift */,
 				D7100A831D5A91AC00EDB033 /* CustomCellAudioList.swift */,
+				D75CB6DB1D5BB18800A8A6F1 /* AllAudioTableViewController.swift */,
+				D75CB6DD1D5BB22C00A8A6F1 /* CellUserAudios.swift */,
 			);
 			path = AlamofirePodsHome;
 			sourceTree = "<group>";
@@ -251,21 +259,70 @@
 		D71F0EEF1D4CEF06004A46B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D71F0EF01D4CEF1D004A46B7 /* AudioModel.swift */,
-				D71F0EF21D4CEF2C004A46B7 /* VideoModel.swift */,
-				D71F0EF41D4CEF3C004A46B7 /* PhotoModel.swift */,
-				D71F0EF61D4CEF4A004A46B7 /* UserModel.swift */,
-				D75C69BC1D4FEE8600AE5274 /* UserResponseModel.swift */,
-				D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */,
-				D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */,
-				D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */,
-				D75AB3501D576FC000FD8467 /* AlbumModel.swift */,
-				D75AB3521D5773E200FD8467 /* AlbumResponseModel.swift */,
-				D7100A7F1D5A7A4300EDB033 /* AudioAlbumModel.swift */,
-				D7100A811D5A7A6400EDB033 /* AudioAlbumResponseModel.swift */,
-				D75CB6D11D5BA19100A8A6F1 /* AudioAlbumListResponseModel.swift */,
+				D75CB6DA1D5BAFFA00A8A6F1 /* User */,
+				D75CB6D91D5BAFE500A8A6F1 /* Video */,
+				D75CB6D81D5BAFD000A8A6F1 /* PhotoAlbum */,
+				D75CB6D71D5BAFB400A8A6F1 /* Photo */,
+				D75CB6D61D5BAF9500A8A6F1 /* AudioAlbum */,
+				D75CB6D51D5BAF6E00A8A6F1 /* Audio */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D75CB6D51D5BAF6E00A8A6F1 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				D71F0EF01D4CEF1D004A46B7 /* AudioModel.swift */,
+				D75CB6D31D5BAF0800A8A6F1 /* AudioListResponseModel.swift */,
+				D75C69BE1D4FEF0A00AE5274 /* AudioResponseModel.swift */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		D75CB6D61D5BAF9500A8A6F1 /* AudioAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				D75CB6D11D5BA19100A8A6F1 /* AudioAlbumListResponseModel.swift */,
+				D7100A811D5A7A6400EDB033 /* AudioAlbumResponseModel.swift */,
+				D7100A7F1D5A7A4300EDB033 /* AudioAlbumModel.swift */,
+			);
+			name = AudioAlbum;
+			sourceTree = "<group>";
+		};
+		D75CB6D71D5BAFB400A8A6F1 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				D71F0EF41D4CEF3C004A46B7 /* PhotoModel.swift */,
+				D75C69C01D4FEF3500AE5274 /* PhotoResponseModel.swift */,
+			);
+			name = Photo;
+			sourceTree = "<group>";
+		};
+		D75CB6D81D5BAFD000A8A6F1 /* PhotoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				D75AB3521D5773E200FD8467 /* AlbumResponseModel.swift */,
+				D75AB3501D576FC000FD8467 /* AlbumModel.swift */,
+			);
+			name = PhotoAlbum;
+			sourceTree = "<group>";
+		};
+		D75CB6D91D5BAFE500A8A6F1 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				D75C69C21D4FEF5E00AE5274 /* VideoResponseModel.swift */,
+				D71F0EF21D4CEF2C004A46B7 /* VideoModel.swift */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
+		D75CB6DA1D5BAFFA00A8A6F1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D71F0EF61D4CEF4A004A46B7 /* UserModel.swift */,
+				D75C69BC1D4FEE8600AE5274 /* UserResponseModel.swift */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 		DF69DEFFC658DA0FA5661093 /* Frameworks */ = {
@@ -474,6 +531,7 @@
 				D75C69C11D4FEF3500AE5274 /* PhotoResponseModel.swift in Sources */,
 				D71F0EFB1D4CF0FA004A46B7 /* AuthorizationService.swift in Sources */,
 				D76F24E81D4E2ED00024448A /* urlsEn.swift in Sources */,
+				D75CB6DC1D5BB18800A8A6F1 /* AllAudioTableViewController.swift in Sources */,
 				D7100A841D5A91AC00EDB033 /* CustomCellAudioList.swift in Sources */,
 				D7060D331D52B43D006AE80C /* AudiosViewController.swift in Sources */,
 				D7002EE21D4AB2D50014728D /* ViewController.swift in Sources */,
@@ -486,6 +544,7 @@
 				D71F0EE81D4CEE50004A46B7 /* AudioGetService.swift in Sources */,
 				D75AB3591D5798E300FD8467 /* DetailPhoto.swift in Sources */,
 				D7002EE01D4AB2D50014728D /* AppDelegate.swift in Sources */,
+				D75CB6DE1D5BB22C00A8A6F1 /* CellUserAudios.swift in Sources */,
 				D75C69C31D4FEF5E00AE5274 /* VideoResponseModel.swift in Sources */,
 				D75AB3571D57959C00FD8467 /* PhotoCell.swift in Sources */,
 				D71F0EF71D4CEF4A004A46B7 /* UserModel.swift in Sources */,
@@ -495,6 +554,7 @@
 				D71F0EFD1D4D679B004A46B7 /* ApiError.swift in Sources */,
 				D75AB34F1D576C6200FD8467 /* PhotoAlbumsCell.swift in Sources */,
 				D7100A801D5A7A4300EDB033 /* AudioAlbumModel.swift in Sources */,
+				D75CB6D41D5BAF0800A8A6F1 /* AudioListResponseModel.swift in Sources */,
 				D71F0EEE1D4CEEE6004A46B7 /* PhotoGetService.swift in Sources */,
 				D7100A821D5A7A6400EDB033 /* AudioAlbumResponseModel.swift in Sources */,
 			);

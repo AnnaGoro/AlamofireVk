@@ -196,6 +196,58 @@
             </objects>
             <point key="canvasLocation" x="2191.5" y="882"/>
         </scene>
+        <!--All Audio Table View Controller-->
+        <scene sceneID="LGF-kN-LGS">
+            <objects>
+                <tableViewController id="nhq-l2-pZN" customClass="AllAudioTableViewController" customModule="AlamofirePodsHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Naa-vF-J9t">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellUserAudios" id="WKd-Qu-7bE" customClass="CellUserAudios" customModule="AlamofirePodsHome" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WKd-Qu-7bE" id="nwl-iP-8av">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5u-PB-kQY">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="8" y="8" width="384" height="27"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="K5u-PB-kQY"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="K5u-PB-kQY"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="userAudiosLabel" destination="K5u-PB-kQY" id="zN5-FE-eiQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nhq-l2-pZN" id="qHK-jW-fXv"/>
+                            <outlet property="delegate" destination="nhq-l2-pZN" id="MLB-NA-GMj"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableData" destination="Naa-vF-J9t" id="gwl-N3-Xey"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9J-Wc-Jlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3265.5" y="554"/>
+        </scene>
         <!--Albums Audio Table View Controller-->
         <scene sceneID="fa5-Iq-b2d">
             <objects>
@@ -204,6 +256,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="adj-Rr-uzS">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="All audios"/>
+                            <connections>
+                                <segue destination="nhq-l2-pZN" kind="show" identifier="showAudiosFromUser" id="wM9-hp-9Se"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellAudioAlbums" id="Ugs-uO-HYo" customClass="CustomCellAudio" customModule="AlamofirePodsHome" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
@@ -445,7 +505,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0av-e6-yxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="-552"/>
+            <point key="canvasLocation" x="1686" y="-534"/>
         </scene>
         <!--Audios View Controller-->
         <scene sceneID="DEZ-Vz-mcM">
@@ -475,19 +535,31 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="0.0" y="11" width="400" height="21"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Gh2-by-oiX" firstAttribute="centerY" secondItem="3WT-9N-3gX" secondAttribute="centerY" id="0mr-Qb-nB9"/>
+                                                <constraint firstItem="Gh2-by-oiX" firstAttribute="leading" secondItem="3WT-9N-3gX" secondAttribute="leadingMargin" id="GjT-pR-uAg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Gh2-by-oiX" secondAttribute="trailing" constant="80" id="fmO-z6-ayz"/>
+                                            </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="Gh2-by-oiX"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="0mr-Qb-nB9"/>
+                                                    <exclude reference="GjT-pR-uAg"/>
+                                                    <exclude reference="fmO-z6-ayz"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="Gh2-by-oiX"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="0mr-Qb-nB9"/>
+                                                    <include reference="GjT-pR-uAg"/>
+                                                    <include reference="fmO-z6-ayz"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -496,9 +568,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="y2a-Kg-Hfk" id="SYj-EI-DE6"/>
                                     <outlet property="delegate" destination="y2a-Kg-Hfk" id="gu0-Hr-i3v"/>
@@ -506,14 +575,32 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="N7p-c0-Y7d" secondAttribute="trailing" constant="-96" id="dk8-HE-ZRa"/>
+                            <constraint firstItem="N7p-c0-Y7d" firstAttribute="top" secondItem="Waa-jm-gRb" secondAttribute="top" id="lrv-qC-Qko"/>
+                            <constraint firstItem="N7p-c0-Y7d" firstAttribute="leading" secondItem="Waa-jm-gRb" secondAttribute="leading" id="oec-Mz-BHb"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="N7p-c0-Y7d" secondAttribute="bottom" constant="-32" id="p1f-wZ-Yel"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="N7p-c0-Y7d"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="dk8-HE-ZRa"/>
+                                <exclude reference="lrv-qC-Qko"/>
+                                <exclude reference="oec-Mz-BHb"/>
+                                <exclude reference="p1f-wZ-Yel"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="N7p-c0-Y7d"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="dk8-HE-ZRa"/>
+                                <include reference="lrv-qC-Qko"/>
+                                <include reference="oec-Mz-BHb"/>
+                                <include reference="p1f-wZ-Yel"/>
                             </mask>
                         </variation>
                     </view>
@@ -523,7 +610,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHc-lc-gNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3340.5" y="189"/>
+            <point key="canvasLocation" x="3796.5" y="163"/>
         </scene>
         <!--UICollectionView-->
         <scene sceneID="1yB-fr-fHm">
@@ -551,7 +638,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="83" height="152"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u1N-Je-UD6">

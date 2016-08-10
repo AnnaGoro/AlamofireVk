@@ -39,6 +39,22 @@ class AudioGetService {
     }
 
     
+    
+    func getAudiosFromUserJSON(owner_id : String) {
+        
+        
+        
+        Alamofire.request(.GET,  mainUrlMethod + mNAudioGet, parameters: ["owner_id" : owner_id, "count" : "10",  "v" : "5,53", "access_token" : accessToken] ).validate()
+            .responseJSON { response in
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
+    }
+    
+
+    
     func getAudiosFromAlbumJSON(owner_id : String, album_id : String) {
         
         
@@ -67,7 +83,7 @@ class AudioGetService {
                         if let audioAlbumModel = audioAlbumResponseModel.response?.items {
                         myData = audioAlbumModel
                         completionHandler(true, myData)
-                        print(" getAudioAlbums AudioGetService \(myData[1].owner_id)")
+                        
                     }
                 }
                 } }
@@ -83,13 +99,14 @@ class AudioGetService {
                 let audioResponseModel = response.result.value
                 print("getAlbums before unwrapping")
                 if let audioResponseModel = audioResponseModel {
-                    if let audioModel = audioResponseModel.response {
-                        myData = audioModel
-                        completionHandler(true, (myData))
-                        //print(" getAlbums PhotoGetService \(myData[1].owner_id)")
+                    if let audioListModel = audioResponseModel.response {
+                        if let audioModel = audioResponseModel.response?.items {
+                            myData = audioModel
+                            completionHandler(true, myData)
+                            print(" getAudios from Album AudioGetService \(myData[1].owner_id)")
+                        }
                     }
-                }
-        }
+                } }
     }
     
     
@@ -97,21 +114,22 @@ class AudioGetService {
         
         var myData: [AudioModel] = [AudioModel]()
         
-        Alamofire.request(.GET, mainUrlMethod + mNAudioGet, parameters: ["owner_id" : owner_id,  "v" : "5.53",  "access_token" : accessToken] ).validate()
+        Alamofire.request(.GET, mainUrlMethod + mNAudioGet, parameters: ["owner_id" : owner_id, "count" : "10", "v" : "5.53",  "access_token" : accessToken] ).validate()
             .responseObject { (response: Response<AudioResponseModel, NSError>) in
                 let audioResponseModel = response.result.value
                 print("getAlbums before unwrapping")
                 if let audioResponseModel = audioResponseModel {
-                    if let audioModel = audioResponseModel.response {
-                        myData = audioModel
-                        completionHandler(true, myData)
-                        //print(" getAlbums PhotoGetService \(myData[1].owner_id)")
+                    if let audioListModel = audioResponseModel.response {
+                        if let audioModel = audioResponseModel.response?.items {
+                            myData = audioModel
+                            completionHandler(true, myData)
+                            print(" getAudios from User AudioGetService \(myData[1].owner_id)")
+                        }
                     }
-                }
-        }
+                } }
     }
     
-    
+      /*
     func getAudioByIdJSON() {
         
         _ = "https://api.vk.com/method/users.get?"
@@ -128,7 +146,7 @@ class AudioGetService {
     
 
     
-    /*
+  
     func getAudioById1 (owner_id : String) {
         Alamofire.request(.GET, (mainUrlMethod + methodNameAudioGet + owner_id + accessToken) )
             .responseObject { (response: Response<AudioResponseModel, NSError>) in
@@ -145,7 +163,7 @@ class AudioGetService {
         }
     }
     */
-
+/*
 //1 - eng, 0 - all
     // count - count of returned audios
     var only_eng = "only_eng=1"
@@ -180,4 +198,5 @@ class AudioGetService {
                 }
         }
     }
+ */
 }
